@@ -2,9 +2,9 @@ Hier ist ein "Template-Set" mit kommentierten Beispielen. Diese Vorlagen können
 
 ---
 
-### A) Vorlagen für Block-Bilder (`image::`)
+## A) Vorlagen für Block-Bilder (`image::`)
 
-Verwenden Sie diese für alle Standardabbildungen, Diagramme und Fotos.
+**Dies für alle Standardabbildungen, Diagramme und Fotos verwenden.**
 
 #### A.1: Das Minimal-Setup (Absolutes Muss)
 Das Wichtigste ist der Alt-Text für die Barrierefreiheit.
@@ -17,7 +17,7 @@ image::pfad/zum/bild.png[Ein prägnanter, beschreibender Alt-Text]
 ```
 
 #### A.2: Das Standard-Bild mit Größenkontrolle (90% der Fälle)
-Die beste Methode, um die Größe zu steuern und einen optionalen Tooltip hinzuzufügen.
+**Die beste Methode, um die Größe zu steuern und einen optionalen Tooltip hinzuzufügen.**
 
 ```asciidoc
 // --- A.2: Standard-Bild mit Größenkontrolle und Tooltip ---
@@ -27,7 +27,7 @@ image::pfad/zum/bild.png[alt="Beschreibung für Screenreader", width=600, title=
 ```
 
 #### A.3: Die formale Abbildung mit Titel und ID
-Für wissenschaftliche Arbeiten, Dokumentationen oder wenn Sie auf das Bild verweisen möchten.
+**Für wissenschaftliche Arbeiten, Dokumentationen oder wenn auf das Bild verwiesen werden soll.**
 
 ```asciidoc
 // --- A.3: Formale Abbildung mit Titel und ID ---
@@ -41,7 +41,7 @@ image::diagramme/architektur.png[alt="Diagramm der Systemarchitektur", width="80
 *Querverweis im Text:* `Siehe <<fig-architektur>> für eine visuelle Darstellung.`
 
 #### A.4: Bild mit Textumfluss (Floating)
-Nützlich für Layouts im Magazin-Stil.
+**Nützlich für Layouts im Magazin-Stil.**
 
 ```asciidoc
 // --- A.4: Bild mit Textumfluss ---
@@ -52,7 +52,7 @@ image::portraits/autor.jpg[alt="Foto des Autors", width=200, float="right", role
 ```
 
 #### A.5: Klickbares Bild (Link)
-Macht das Bild zu einem Link, der sich optional in einem neuen Tab öffnet.
+**Macht das Bild zu einem Link, der sich optional in einem neuen Tab öffnet.**
 
 ```asciidoc
 // --- A.5: Klickbares Bild (Link) ---
@@ -63,7 +63,7 @@ image::logos/projekt-logo.svg[alt="Projekt-Logo", width=250, link="https://proje
 ```
 
 #### A.6: Das "Cross-Media"-Bild (HTML & PDF optimiert)
-Die Profi-Methode, um für verschiedene Ausgabeformate unterschiedliche Größen zu definieren.
+**Die Profi-Methode, um für verschiedene Ausgabeformate unterschiedliche Größen zu definieren.**
 
 ```asciidoc
 // --- A.6: "Cross-Media"-Bild für HTML & PDF ---
@@ -75,12 +75,12 @@ image::screenshots/ui-feature.png[alt="Screenshot des neuen Features", width="90
 
 ---
 
-### B) Vorlagen für Inline-Bilder (`image:`)
+## B) Vorlagen für Inline-Bilder (`image:`)
 
-Verwenden Sie diese nur für sehr kleine Symbole oder Icons direkt im Text.
+**Diese Variante nur verwenden für sehr kleine Symbole oder Icons direkt im Text.**
 
 #### B.1: Das einfache Icon
-Ein kleines Icon im Fließtext mit Alt-Text.
+**Ein kleines Icon im Fließtext mit Alt-Text.**
 
 ```asciidoc
 // --- B.1: Einfaches Inline-Icon ---
@@ -90,7 +90,7 @@ Bitte speichern image:icons/save.svg[Speichern] Sie Ihre Änderungen.
 ```
 
 #### B.2: Icon mit angepasster Größe
-Die häufigste Anwendung: die Größe des Icons an die Schriftgröße anpassen.
+**Die häufigste Anwendung: die Größe des Icons an die Schriftgröße anpassen.**
 
 ```asciidoc
 // --- B.2: Inline-Icon mit angepasster Größe ---
@@ -101,10 +101,10 @@ Achtung image:icons/warning.svg[Warnung, width=16], dieses Feld ist ein Pflichtf
 
 ---
 
-### C) Anti-Pattern (Was man vermeiden sollte)
+## C) Anti-Pattern (Was man vermeiden sollte)
 
 #### C.1: Bildproportionen verzerren
-Vermeiden Sie es, Höhe und Breite manuell zu setzen, es sei denn, Sie wissen genau, was Sie tun.
+**Unbedingt vermeiden, Höhe und Breite manuell zu setzen! Es sei denn, die Auswirkung ist bekannt und beabsichtigt.**
 
 ```asciidoc
 // --- ANTI-PATTERN: Bild verzerren ---
@@ -119,7 +119,7 @@ image::landschaft.jpg[alt="Landschaft", width=800]
 ```
 
 #### C.2: Riesige Inline-Bilder
-Ein Inline-Bild (`image:`) sollte niemals groß sein.
+**Ein Inline-Bild (`image:`) sollte niemals groß sein.**
 
 ```asciidoc
 // --- ANTI-PATTERN: Riesiges Inline-Bild ---
@@ -134,4 +134,5 @@ Der Bericht zeigt die folgenden Ergebnisse:
 image::grosses-diagramm.png[Diagramm, width=150]
 ```
 
-Dieses Template-Set sollte Ihnen eine solide Grundlage für praktisch jeden Anwendungsfall im Umgang mit Bildern in AsciiDoc bieten.
+**Dieses Template-Set sollte eine solide Grundlage für praktisch jeden Anwendungsfall im Umgang mit Bildern in AsciiDoc bieten.**
+
