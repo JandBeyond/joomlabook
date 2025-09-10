@@ -1,0 +1,49 @@
+// =======================================================
+// BLOCK-BILDER  (eigenständige Abbildungen mit Caption)
+// =======================================================
+
+// GLOBAL für Bildverzeichnis setzen, dann Pfade sind kurz:
+:imagesdir: ../media
+
+// ----- Standard-Blockbild mit Alt-Text -----------------
+// {counter:image} sorgt für figure caption falls aktiviert
+// (erfordert: :figure-caption: Abbildung )
+// Achtung: Erstes Feld = Alt-Text (Accessibility!)
+// Zweites + drittes Feld oder width/height = Bildgröße
+.Ein Hund am Strand
+image::hund.png[Hund am Strand, 400, 200]
+
+// ----- Block-Bild mit nur Breite -----------------------
+.Einfach zentriert
+image::katze.png[Katze im Körbchen, width=300, align=center]
+
+// ----- Block-Bild mit Link -----------------------------
+.Eine klickbare Grafik
+image::diagramm.png[Diagramm, width=500, link=https://example.org]
+
+// ----- Mit Rolle für CSS- oder PDF-Themeneinstellungen --
+image::banner.png[Banner, width=600, role=banner-image]
+
+
+// =======================================================
+// INLINE-BILDER  (kleine Symbole im Textfluss)
+// =======================================================
+
+// ----- Einfaches Inline-Bild ----------------------------
+Das ist unser Logo image:logo.png[Logo klein, 24, 24] neben dem Text.
+
+// ----- Inline mit Link ---------------------------------
+Bitte klicken Sie auf image:icon-help.png[Hilfe, 20, 20, link=https://hilfe.example.org].
+
+// ----- Inline mit CSS-Rolle ----------------------------
+Ein Warnhinweis image:warn.png[Achtung, 16, 16, role=icon-warning] mitten im Satz.
+
+
+// =======================================================
+// STOLPERFALLEN vermeiden
+// =======================================================
+// - Niemals scale UND width/height gleichzeitig → Konflikte.
+// - Inline-Bilder haben KEINE Captions (kein Titel über dem Bild).
+// - Blockbilder sind optimal für Abbildungen mit Unterschrift.
+// - Immer einen sinnvollen Alt-Text vergeben! Für Barrierefreiheit.
+// =======================================================
