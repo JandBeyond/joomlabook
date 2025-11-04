@@ -54,3 +54,5 @@ gestalten.
 Übrigens, je besser Sie Ihre Webseite hinsichtlich Barrierefreiheit
 optimieren, desto bessere Voraussetzungen haben Sie auch im Bereich der
 Suchmaschinenoptimierung.
+
+|===
