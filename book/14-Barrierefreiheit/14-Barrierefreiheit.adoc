@@ -45,14 +45,9 @@ mitgelieferte Hathor-Template bietet hier (ähnlich wie Beez im Frontend)
 jedoch eine gute Basis, um auch das Backend möglichst barrierefrei zu
 gestalten.
 
-[width="99%",cols="14%,86%",options="header",]
-|===
-|CHV++_++BOX++_++ID++_++02 |
-|icn002 a|
-*Hinweis:*
-
+[TIP]
+====
 Übrigens, je besser Sie Ihre Webseite hinsichtlich Barrierefreiheit
 optimieren, desto bessere Voraussetzungen haben Sie auch im Bereich der
 Suchmaschinenoptimierung.
-
-|===
+====
