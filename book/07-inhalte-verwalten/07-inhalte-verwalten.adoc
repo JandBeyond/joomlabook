@@ -1,5 +1,3 @@
-[[07-inhalte-verwalten]]
-
 == Inhalte verwalten
 
 Die Verwaltung der Inhalte ist einer der zentralen Bereiche in der

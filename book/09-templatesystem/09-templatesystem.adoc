@@ -1,5 +1,3 @@
-[[09-templatesystem]]
-
 == Das Template-System
 
 Die inhaltlichen Arbeiten an der Seite sind jetzt, abgesehen vom noch

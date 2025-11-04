@@ -1,5 +1,3 @@
-[[06-backend]]
-
 == Das Backend
 
 Nachdem nun die Grundbegriffe geklärt sind, können wir uns mit unserem

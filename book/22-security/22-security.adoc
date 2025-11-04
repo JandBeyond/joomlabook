@@ -1,0 +1,21 @@
+== Sicherheit
+
+Joomla! gilt in Szenekreisen oft als unsicheres, leicht angreifbares
+CMS, und ein Blick in die gängigen Supportforen vermittelt schnell das
+Gefühl, dass an dieser Aussage etwas dran sein könnte. Analysiert man
+jedoch die entsprechenden Fälle, so kommt man schnell zu dem Schluss,
+dass die Ursache für den erfolgreichen Angriff nur in sehr wenigen
+Ausnahmefällen auf eine aktuelle Lücke der Joomla!-Kerninstallation
+zurückzuführen ist, sondern vielmehr auf Fehlerkonfigurationen und
+schlecht programmierte Dritterweiterungen. Um effektive Gegenmaßnahmen
+zu ergreifen, ist es jedoch nötig, sowohl die Motivation der Angreifer
+als auch die entsprechenden Angriffstypen zu verstehen, weshalb wir
+dieses Kapitel mit ein wenig Grundlagenarbeit starten wollen.
+
+include::abschnitte/01-motivation-angreifer.adoc[]
+
+include::abschnitte/02-angriffstypen.adoc[]
+
+include::abschnitte/03-sicherheitsmassnahmen.adoc[]
+
+include::abschnitte/04-gehackt-was-nun.adoc[]

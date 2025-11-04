@@ -36,22 +36,24 @@ include::book/11-benutzer-rechtevewaltung/11-benutzer-rechtevewaltung.adoc[]
 
 include::book/12-overrides-templates/12-overrides-templates.adoc[]
 
-include::book/13-seo/13-seo.adoc[]
+include::book/13-template-workshop/13-template-workshop.adoc[]
 
-include::book/14-mehrsprachigkeit/14-mehrsprachigkeit.adoc[]
+include::book/14-Barrierefreiheit/14-Barrierefreiheit.adoc[]
 
-include::book/15-spezielle-erweiterungen/15-spezielle-erweiterungen.adoc[]
+include::book/15-seo/15-seo.adoc[]
 
-include::book/16-custom-fields/16-custom-fields.adoc[]
+include::book/16-mehrsprachigkeit/16-mehrsprachigkeit.adoc[]
 
-include::book/17-erweiterungen-erstellen/17-erweiterungen-erstellen.adoc[]
+include::book/17-custom-fields/17-custom-fields.adoc[]
 
-include::book/18-best-practices/18-best-practices.adoc[]
+include::book/18-Webservices-api/18-Webservices-api.adoc[]
 
-include::book/19-online-gehen/19-online-gehen.adoc[]
+include::book/19-best-practices/19-best-practices.adoc[]
 
-include::book/20-performace-optimierungen/20-performace-optimierungen.adoc[]
+include::book/20-Troubleshooting/20-Troubleshooting.adoc[]
 
-include::book/21-security/21-security.adoc[]
+include::book/21-performace-optimierungen/21-performace-optimierungen.adoc[]
 
-include::book/22-updates-migration/22-updates-migration.adoc[]
+include::book/22-security/22-security.adoc[]
+
+include::book/23-updates-migration/22-updates-migration.adoc[]

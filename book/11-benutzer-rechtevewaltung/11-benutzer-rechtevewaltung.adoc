@@ -1,5 +1,3 @@
-[[11-benutzer-rechtevewaltung]]
-
 == Benutzer- und Rechteverwaltung
 
 Eine der meistkritisiertesten Funktionen von Joomla! 1.5 war die nur

@@ -1,0 +1,56 @@
+== Barrierefreiheit
+
+Barrierefreiheit ist ein Begriff, den man im Alltag wohl
+am ehesten aus Einrichtungen kennt, die man mit dem Rollstuhl oder mit
+Behinderungen problemlos erreichen kann. Übertragen auf den Webbereich
+bedeutet Barrierefreiheit, Webseiten so zu gestalten, dass Menschen mit
+körperlichen oder geistigen Einschränkungen Inhalte der Webseite abrufen
+können.
+
+Dabei sind eine Fülle and technischen, gestalterischen und inhaltlichen
+Dingen zu beachten. Darunter fallen:
+
+* Die Erzeugung von validem, semantisch korrektem HTML.
+* Einsatz von kontrastreichen Farben.
+* Klar strukturierte Navigation.
+* Das Setzen von Alternativtexten, Labeln und weiteren
+Beschreibungselementen.
+* Die Formulierung von leicht verständlichen Texten.
+* Der Verwendung von WAI-ARIA-Attributen
+(https://www.w3.org/wai/[https://www.w3.org/WAI/]).
+
+Wie verhält sich Joomla! auf diesem Feld? Kann ich mein eigenes Template
+barrierefrei erstellen? Dank der Bemühungen der deutschen Entwicklerin
+Angie Radtke ist bereits seit Joomla! 1.5 das barrierefreie Template
+Beez in den Joomla!-Kern integriert, das mit zahlreichen
+Template-Overrides für eine semantisch korrekte und unter dem
+Gesichtspunkt der Barrierefreiheit optimierte Ausgabe sorgt. So wurde
+beispielsweise das Kontaktformular um die entsprechenden
+WAI-ARIA-Attribute ergänzt oder der Code des Templates mit unsichtbaren
+Sprungmarken erweitert.
+
+Technisch gesehen stehen also einer hinsichtlich Barrierefreiheit
+optimierten Website mit Joomla! keinerlei Hindernisse im Weg. Machen Sie
+sich jedoch klar, dass es keine „universelle Implementierung“ für
+Barrierefreiheit geben kann, sondern dass sich aus dem jeweiligen Inhalt
+und Design hochindividuelle Anforderungen ergeben, die von Fall zu Fall
+geprüft und realisiert werden müssen. Außerdem erfordert eine
+barrierefreie CMS-Installation auch speziell geschulte Nutzer, denn ohne
+Alternativtexte und sinnvoll gesetzte AccessKeys ist auch die sauberste
+Templateumsetzung nur bedingt nützlich.
+
+HINWEIS: Das Standard Joomla!-Backendtemplate Isis ist nur eingeschränkt
+barrierefrei und daher mit Screenreadern kaum bedienbar. Das
+mitgelieferte Hathor-Template bietet hier (ähnlich wie Beez im Frontend)
+jedoch eine gute Basis, um auch das Backend möglichst barrierefrei zu
+gestalten.
+
+[width="99%",cols="14%,86%",options="header",]
+|===
+|CHV++_++BOX++_++ID++_++02 |
+|icn002 a|
+*Hinweis:*
+
+Übrigens, je besser Sie Ihre Webseite hinsichtlich Barrierefreiheit
+optimieren, desto bessere Voraussetzungen haben Sie auch im Bereich der
+Suchmaschinenoptimierung.

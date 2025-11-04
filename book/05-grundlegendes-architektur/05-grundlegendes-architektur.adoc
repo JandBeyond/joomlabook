@@ -1,5 +1,3 @@
-[[05-grundlegendes-architektur]]
-
 == Grundlegende Begriffe und Architektur
 
 Bevor wir nun mit dem Aufbau unserer Seite beginnen, möchte ich Ihnen

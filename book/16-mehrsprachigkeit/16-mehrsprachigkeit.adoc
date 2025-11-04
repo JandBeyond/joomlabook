@@ -1,0 +1,18 @@
+== Mehrsprachigkeit
+
+In diesem Kapitel wollen wir uns mit den Funktionen zur Umsetzung
+_mehrsprachiger Webseiten_ beschäftigen. Dieses Thema ist insbesondere
+deshalb interessant, weil es eines der am häufigsten nachgefragten
+Features im professionellen Umfeld ist. Denn schließlich sind viele
+Unternehmen mittlerweile auch international tätig und wollen ihre Seite
+daher zumindest in den beiden obligatorischen Sprachen Deutsch und
+Englisch anbieten. Joomla! bietet uns hierfür eine großartige Lösungen:
+die in Joomla! integrierte Funktion zur Realisierung mehrsprachiger
+Seiten.
+
+Wichtig ist: Das System bietet uns nur eine Oberfläche zur Eingabe der
+entsprechenden Übersetzung und fungiert nicht als automatisches
+Übersetzungstool – Sie werden um die entsprechende Übersetzungsarbeit
+also nicht herumkommen.
+
+include::abschnitte/01-integrierte-mehrsprachigkeit.adoc

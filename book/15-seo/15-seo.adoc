@@ -1,0 +1,19 @@
+== Suchmaschinenoptimierung
+
+Unsere Beispielseite läuft, Inhalte und Design sind fertig, die Seite
+ist online, aber wird durch Suchmaschinen nicht oder nur schlecht
+gefunden? Dann sollten Sie sich näher mit dem Thema
+Suchmaschinenoptimierung beschäftigen. Ich möchte in diesem Kapitel
+nicht auf die allgemeinen Grundlagen, Techniken und Vorgehensweisen der
+Suchmaschinenoptimierung eingehen – dazu haben andere Autoren bereits
+regelrechte Buchreihen veröffentlicht, die das Thema wesentlich besser
+abdecken. Stattdessen möchte ich einige Joomla!-spezifische Dinge
+erläutern.
+
+include::abschnitte/01-meta-daten.adoc[]
+
+include::abschnitte/02-modern-routing.adoc[]
+
+include::abschnitte/03-sef-urls.adoc[]
+
+include::abschnitte/04-umleitungen.adoc[]
