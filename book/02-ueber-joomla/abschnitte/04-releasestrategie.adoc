@@ -1,70 +1,109 @@
 === Releasestrategie
 
-Mit der Veröffentlichung von Joomla! 3.2 hat das Joomla-Projekt einen
-Wechsel der Releasestrategie beschlossen. Das System des sog.
-Time-Based-Releasecycle, das zum Release von Joomla 1.6 im Jahr 2011
-eingeführt wurde und auf der Idee von fest terminierten
-Veröffentlichungen und Langzeit- und Kurzzeitsupport-Versionen basierte,
-wurde aufgegeben und stattdessen eine Strategie auf Basis der beiden
-Grundsätze "_schlanke, schnelle_ _Releases_" und "_semantische
-Versionierung_" eingeführt.
+Mit der Veröffentlichung von Joomla! 4 im August 2021 hat das Joomla!-Projekt 
+eine neue Release-Strategie eingeführt. Diese steht auf zwei Grundsätzen:
 
-Schlanke, schnelle Releases bedeuten dabei, dass neue Joomla!-Versionen
-in relativ kurzen zeitlichen Abständen (im Idealfall ca. 1 Release pro
-Quartal) veröffentlicht werden sollen und die jeweiligen Releases dabei
-jeweils nur relativ, kleine überschaubare Sets an Funktionen mitbringen
-sollen. Das gegenteilige Modell wäre z.B. die Veröffentlichung von nur
-einem Update pro Jahr, das dann aber wesentlich umfangreicher ist und
-eine Vielzahl von Funktionen mitbringt. Dieser Ansatz erlaubt den
-Joomla!-Entwicklern sehr schnell auf neue Anforderungen der Web-Welt zu
-reagieren und führt zudem zu schnellen Erfolgserlebnissen für
-Entwickler, die eine Funktion zu Joomla! beisteuern.
+* Sematische Versionierung
+* Feste Release-Termine
 
-Der zweite Grundsatz, die sogenannten semantische Versionierung, gibt
+Doch bevor wir zu diesen beiden Teilen der Strategie kommen, noch ein paar 
+allgemeine Bemerkungen.
+
+Joomla! benötigt einen Unterbau aus drei Komponenten:
+
+* einen Webserver (meist Apache),
+* einen Interpreter für die Skriptsprache PHP und
+* eine Datenbank (MySQL, MariaDB oder PostgresQL).
+
+Diese Komponenten (alle genannten stehen ebenso wie Joomla! jeweils unter 
+einer Open-Source-Lizenz) entwickeln sich ebenso weiter wie Joomla! Und 
+natürlich müssen die eingesetzten Versionen miteinander harmonieren, was 
+durch die Releasestrategie von Joomla! sichergestellt werden muss.
+
+==== Sematische Versionierung
+
+Der erste Grundsatz, die sogenannte Semantische Versionierung, gibt
 vor, welche Art von Änderung sich auf welche Stelle der Versionsnummer
-auswirkt. Eine dreistillige Versionsnummer, also x.y.z lässt sich dabei
+auswirkt. Eine dreistellige Versionsnummer, also X.Y.Z lässt sich dabei
 in die folgenden Komponenten aufteilen:
 
 [arabic]
-. X ist die sog. Majorversion. Eine Änderung dieser Ziffer ist
-notwendig, wenn das Joomla! Projekt eine Änderung einbaut, die einen
+. X ist die sog. Majorversion. Eine Änderung dieser Ziffer erfolgt, 
+wenn das Joomla! Projekt eine Änderung einbaut, die einen
 Bruch der Rückwärtskompatiblität zur Folge hat. Mit anderen Worten:
 ändert sich die erste Stelle der Versionsnummer, müssen Entwickler ihre
 Erweiterungen an die neue Version anpassen, da diese ansonsten nicht
-mehr lauffähig ist. Somit ist der Wechsel von der einen zur anderen
+mehr lauffähig sind. Somit ist der Wechsel von der einen zur anderen
 Majorversion ein etwas komplexerer Prozess, der im Joomla!-Jargon als
 Migration bezeichnet wird und in Kapitel 22 genauer beschrieben ist.
-. Y ist die sog. Minorversion. Hier ist eine Änderung immer dann
-notwendig, wenn eine neue Funktion zu Joomla! hinzugefügt wird. Diese
-Minorversionen erscheinen im oben bereits beschriebenen
-Quartalsrhythmus. Ein Update auf eine neue Minorversionen ist sehr
-simpel und in der Regel mit einem simplen Mausklick durchführbar.
+Für jede Hauptversion legt das Joomla! Projekt die Mindestanforderungen 
+an den Webserver sowie an PHP und Datenbank fest. Diese Mindestanforderungen
+bleiben während der gesamten Lebenszeit der jeweiligen Hauptversion 
+unverändert.
+. Y ist die sog. Minorversion. Bei einer Änderung der Minorversion
+können neue Funktionen zu Joomla! hinzugefügt werden. Ein Update auf 
+eine neue Minorversionen ist relativ unkritisch und in der Regel mit 
+einem simplen Mausklick durchführbar.
 . Z ist die sog. Patchversion. Diese kleinste Art von Update enthält
-ausschließlich Fehlerbehebungen (auch als Patches bezeichnet) und können
+ausschließlich Fehlerbehebungen (auch als Patches bezeichnet) und kann
 ebenfalls bedenkenlos per Mausklick direkt in der Administration von
-Joomla eingespielt werden.
+Joomla! eingespielt werden.
+
+==== Feste Release-Termine
+
+Die Einführung fester Release-Termine ist eine Konsequenz aus den 
+Erfahrungen mit der Hauptversion 3 von Joomla! Joomla 3.0.0 erschien 
+im August 2012, Joomla 4.0.0 aber erst im August 2021. Da sich ja innerhalb 
+einer Hauptversion die Mindestanforderungen nicht ändern dürfen, 
+musste z.B. Joomla 3.10.0 im August 2021 noch PHP 5.2 unterstützen, das 
+neun Jahre vorher aktuell war. Damit konnten die Joomla-Entwickler die erweiterten 
+Möglichkeiten der inzwischen erschienenen PHP-Hauptversionen 7 und 8 
+nicht nutzen. Ähnlich sah es bei den Datenbanken aus.
+
+Für Webseitenbetreiber und Entwickler von Erweiterungen schien das eine gute 
+Zeit zu sein: Die Webseiten liefen, die Erweiterungen ebenfalls. Warum sollte 
+man da viel ändern? Dass sich die Softwarelandschaft in den langen Jahren 
+von Joomla 3 gründlich gewandelt hatte, wurde von vielen ignoriert.
+
+Dann kam Joomla 4, und mit ihm der Schock. Joomla hatte neue Mindestanforderungen 
+und eine neue Architektur für Erweiterungen. Alte Erweiterungen (einschließlich 
+der Templates) funktionierten nicht mehr mit Joomla 4 und PHP 8. Viele 
+Updateversuche gingen schief, weil der Migrationsleitfadenfootnote:
+[https://docs.joomla.org/Joomla_3.x_to_4.x_Step_by_Step_Migration/de] nicht 
+beachtet wurde oder gar nicht bekannt war. Darüber hinaus stellten viele 
+Webseitenbetreiber erschrocken fest, dass so manche lieb gewonnene Erweiterung 
+nicht mehr weiterentwickelt wurde und für Joomla 4 damit nicht mehr zur 
+Verfügung stand.
+
+All dies führte zu großer Verunsicherung bei den Joomla-Anwendern. Als 
+Reaktion darauf beschloss das Joomla-Projekt die Einführung von festen 
+Release-Zyklen mit folgenden Vorgaben:
+
+
 +
-Um den Nutzern von Joomla! eine gewisse langfristige Planungssicherheit
-zu geben, gibt das Joomla!-Projekt feste Mindestzeiträume an, in denen
-eine bestimmte Version noch mit Sicherheitsupdates und Fehlerbehebungen
-versorgt wird. Grundregel ist dabei, dass die jeweils letzte
-Minorversion eines Major-Zweigs für 2 Jahre unterstützt wird.
+Alle zwei Jahre erscheint eine neue Majorversion von Joomla. Beginnend 
+mit Joomla 5.0.0 ist der Releasetermin immer Mitte Oktober.
 +
-Ein kleines Beispiel, um diesen etwas abstrakten Satz mit konkreten
-Inhalten zu füllen:
+Nach dem Release einer Hauptversion (N+1) wird die vorhergehende 
+Hauptversion (N) noch für zwei weitere Jahre unterstützt, also bis zum 
+Release der Hauptversion (N+2).
 +
-Wir nehmen einmal an, dass am 01.01.2018 eine fiktive Joomla!-Version
-4.0 erscheint. Im weiteren Entwicklungsverlauf erscheinen für diesen
-neuen Versionszweig 4.x nun mehrere Minor-Releases, die neue Funktionen
-nachrüsten. Die letzte Minor-Version, in unserem fiktiven Fall wäre das
-zum Beispiel 4.9.0, erscheint dabei am 01.03.2020. Der Releasetermin
-dieser letzten Minor-Version wäre nun ausschlaggebend für das Ende des
-Supportzeitraums von 2 Jahren, womit der Support für die Joomla!-Version
-4.x am 28.02.2022 enden würde. Im Rahmen dieses Supportzeitraums würde
-es weiterhin Fehlerbehebungen und Sicherheitsupdates geben, die sich
-dann auf die letzte Ziffer der Versionsnummer (z.B. als 4.9.1, 4.9.2
-etc.) auswirken würden.
+Alle sechs Monate erscheint eine neue Minorversion, also jeweils Mitte 
+April und Mitte Oktober. 
 +
-Joomla! bietet Entwicklern und Nutzern hier also eine langfristige
-Planungssicherheit und eignet sich daher perfekt für Projekte, die über
-einen längeren Zeitraum unterstützt werden müssen.
+Innerhalb einer Majorversion (N) ist die Minorversion (N).4 die letzte. Sie 
+erscheint gleichzeitig mit der neuen Majorversion (N+1) und bildet die 
+Brückenversion von der alten auf die neue Hauptversion. Ein Update auf 
+die neue Majorversion (N+1) ist nur von der Minorversion (N).4 möglich. 
+Die Minorversion (N).4 erhält nur noch Sicherheitsupdates.
++
+Innerhalb einer Minorversion erscheint alle sechs Wochen eine neue 
+Patchversion. 
++
+In der Release-Ankündigung wird jeweils angegeben, ob es sich um 
+ein Sicherheits-kritisches Update handelt.
++
+Ab Joomla 5 gibt es für jede Majorversion (N) ein sogenanntes 
+"Kompatibilitäts-Plugin". Ist dieses Plugin aktiviert, laufen alle 
+Erweiterungen (inkl. Templates), die in der Majorversion (N-1) lauffähig 
+waren, auch in der Majorversion (N).

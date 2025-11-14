@@ -15,7 +15,8 @@ Content-Management-Systemen gehören, bezieht sich der Begriff des CMS
 i. d. R. auf Web-Content-Management-Systeme, die _ausschließlich_ als
 Webanwendungen arbeiten, also über den Webbrowser administriert werden.
 
-Diese WCMS erlauben es mehreren Benutzern, gemeinschaftlich an den
+Diese WCMSfootnote:[https://de.wikipedia.org/wiki/Content-Management-System] 
+erlauben es mehreren Benutzern, gemeinschaftlich an den
 hinterlegten Informationen zu arbeiten, und sind medienneutral in ihrer
 Ausgabe. Medienneutral bedeutet dabei, dass die hinterlegten
 Informationen unabhängig vom Ausgabeformat (HTML, PDF, Excel) bzw. der
