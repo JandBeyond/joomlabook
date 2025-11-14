@@ -18,9 +18,9 @@ Du kannst auch ein Problem melden, damit wir besprechen können, wie oder ob das
 
 ## Umfangreiche Überarbeitungen
 
-Eröffnen Sie eine Diskussion, bevor Sie beginnen.
+Eröffne eine Diskussion, bevor du beginnst.
 Eine umfangreiche Überarbeitung ist in der Regel sehr subjektiv und dient oft nur der Klarstellung für eine kleine Anzahl von Lesern.
-Es ist unwahrscheinlich, dass Ihre Prosa *so* viel besser ist, dass es sich lohnt, große Teile des Textes zu ändern.
+Es ist unwahrscheinlich, dass deine Prosa *so* viel besser ist, dass es sich lohnt, große Teile des Textes zu ändern.
 
 ## Dateinamen und organisation der Inhalte
 
@@ -37,8 +37,14 @@ Alle Bilder sind im media Verzeichnis nach Kapiteln sortiert. Sprich alle Bilder
 
 ## Nummern
 Alle Nummern bei Dateinamen und Bildern sind immer zweistellig ggf. mit einer führenden Null.
-Falsch: 1-einletung, 7.png
+Falsch: 1-einleitung, 7.png
 Richtig: 01-einleitung, 07.png
+
+## Rahmen
+* Fokus sind Joomla-Anfänger z.B. eine Redakteurin.
+* Wir verwenden die Du-Form.
+* Wir dokumentieren Joomla! Version 6.
+* Wir gendern in der Form: Administrator:innen.
 
 ## Danke
 
