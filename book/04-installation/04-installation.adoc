@@ -3,7 +3,7 @@
 Jetzt sind endlich alle Vorbereitungen abgeschlossen, und wir können mit
 der Installation unserer neuen Joomla!-Seite starten. Dabei ist zu
 unterscheiden, ob wir die Installation direkt auf einem Webserver oder
-in der lokalen Umgebung (XAMPP, MAMP, LAMP) durchführen wollen.
+in der lokalen Umgebung durchführen wollen.
 
 include::abschnitte/01-install-lokal.adoc[]
 
