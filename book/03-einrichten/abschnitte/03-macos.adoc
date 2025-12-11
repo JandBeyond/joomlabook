@@ -1,0 +1,191 @@
+<<<
+
+=== Einrichten der Arbeitsumgebung unter macOS 
+
+Zum Installieren der benötigten Software wird unter macOS die Paketverwaltung *Homebrew* verwendet.
+Homebrew bietet eine einfache Möglichkeit, aktuelle Versionen der Werkzeuge zu installieren und später zu aktualisieren.
+
+NOTE: Die folgenden Kommandos führst du als normaler Benutzer im Terminal aus.
+      Administratorrechte als `root` sind nicht erforderlich.
+      Falls ein `sudo`-Kommando notwendig ist, wirst du nach deinem Passwort gefragt.
+      Dabei handelt es sich um das Passwort, mit dem du dich am Mac anmeldest.
+
+==== Homebrew installieren
+
+Homebrew wird mit dem folgendem Kommando eingerichtet:
+
+[console,opts=keep-together]
+----
+/bin/bash -c "$(curl -fsSL \
+          https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+----
+
+Gegebenenfalls musst du die Installation der _Command Line Tools for Xcode_ durch [Enter] bestätigen.
+Folge dann den Anweisungen für die nächsten Schritte:
+
+[console,opts=keep-together]
+----
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+----
+
+Nach der Installation prüfst du Homebrew mit:
+
+ brew --prefix
+
+Ausgegeben wird das Homebrew Basisverzeichnis.
+Auf einem Mac mit Apple Chip (ARM) installiert sich Homebrew in `/opt/homebrew`.
+Binärdateien werden in `/opt/homebrew/bin` abgelegt,
+Konfigurationsdateien in `/opt/homebrew/etc` usw.
+
+Auf einem Intel-Chip (x86-64) Mac ist dieses Basisverzeichnis stattdessen `/usr/local`.
+Wir beziehen uns im folgenden auf die Pfade mit dem Homebrew-Basisverzeichnis `/opt/homebrew`.
+Wenn dein Basisverzeichnis anders lautet, ändere die Pfade bitte entsprechend.
+
+<<<
+
+==== PHP 8.4 installieren
+
+Die für Joomla! 6 empfohlene PHP-Version ist PHP 8.4. Die Installation erfolgt mit:
+
+ brew install php@8.4
+
+Anschließend wird die installierte Version aktiv geschaltet:
+
+ brew link --overwrite --force php@8.4
+
+Der PHP Interpreter kann mit dem folgenden Befehl überprüft werden:
+
+ php -v
+
+Das Kommando zeigt dann die PHP Hauptversion *8.4*, wie für Joomla! 6 empfohlen:
+
+ PHP 8.4.15 (cli) (built: Nov 18 2025 17:26:05) (NTS)
+
+<<<
+
+==== MariaDB installieren und starten
+
+MariaDB steht als Datenbankserver bereit und wird mit Homebrew installiert:
+
+ brew install mariadb
+
+Um MariaDB jetzt und für das nächste Einschalten zu starten:
+
+ brew services start mariadb
+
+Der Zugang erfolgt ohne Passwort mit den Datenbank-Benutzer `root`. Eine Verbindung kann getestet werden mit:
+
+ sudo mariadb -uroot -e 'SELECT VERSION();'
+
+Die Version des Datenbank-Servers wird angezeigt:
+
+[console,opts=keep-together]
+----
++----------------+
+| VERSION()      |
++----------------+
+| 12.1.2-MariaDB |
++----------------+
+----
+
+<<<
+
+==== Visual Studio Code installieren
+
+Auch den Quelltexteditor VS Code kannst du einfach mit Homebrew installieren:
+
+ brew install --cask visual-studio-code
+
+Damit wurde auch gleich das Kommando `code` verlinkt.
+Du kannst das Programm jetzt testweise starten:
+
+ code
+
+.Visual Studio Code in macOS
+image::media/03/vsc-mac.png[Visual Studio Code in macOS]
+
+Drücke <Command><Q> zum Beenden des Programms.
+
+<<<
+
+==== Apache installieren und konfigurieren
+
+macOS enthält bereits einen Apache-Webserver, aber da dieser keine aktuelle PHP-Integration bietet
+und auch von Systemupdates überschrieben werden könnte, installierst du stattdessen
+die Homebrew-Version des Apache-Webservers und startest ihn:
+
+[console,opts=keep-together]
+----
+brew install httpd
+brew services start httpd
+----
+
+Der Webserver ist erreichbar unter http://localhost:8080 und zeigt "It works!" an:
+
+.Apache Testseite „It works!” 
+image::media/03/it-works.png[Apache Testseite „It works!”]
+
+<<<
+
+Für die Verwendung von PHP musst du Apache so konfigurieren, dass PHP 8.4 geladen wird.
+Öffne dafür mit VS Code die Datei `httpd.conf`:
+
+ code /opt/homebrew/etc/httpd/httpd.conf
+
+Füge am Ende der Datei die beiden folgende Zeilen an (ggf. angepasst an dein Homebrew-Basisverzeichnis):
+
+[console,opts=keep-together]
+----
+LoadModule php_module /opt/homebrew/opt/php@8.4/lib/httpd/modules/libphp.so
+AddType application/x-httpd-php .php
+----
+
+Außerdem konfigurierst du `index.php` als zusätzliche Default-Datei.
+Suche nach `DirectoryIndex` und füge `index.php` vor `index.html` ein:
+[console,opts=keep-together]
+----
+<IfModule dir_module>
+    DirectoryIndex index.php index.html
+</IfModule>
+----
+
+Speichere die Datei, beende VS Code und starte Apache neu:
+
+ brew services restart httpd
+
+Du kannst die PHP-Einbindung testen, indem du im DocumentRoot `/opt/homebrew/var/www/`auf deinem Mac  eine Datei
+`info.php` anlegst:
+
+ echo "<?php phpinfo();" > /opt/homebrew/var/www/info.php
+
+Rufe danach die folgende Adresse im Browser auf: http://localhost:8080/info.php
+
+Wenn die PHP-Konfigurationsseite erscheint, ist Apache korrekt für PHP 8.4 eingerichtet.
+
+.Website phpinfo 
+image::media/03/phpinfo.png[Website phpinfo]
+
+<<<
+
+==== phpMyAdmin einrichten
+
+Die Webanwendung phpMyAdmin zur Verwaltung der Datenbank wird auch mit Homebrew installiert:
+
+ brew install phpmyadmin
+
+Die Anwendung befindet sich nach der Installation im Verzeichnis: `/opt/homebrew/share/phpmyadmin`.
+
+Für den Zugriff über den lokalen Webserver wird phpMyAdmin per Alias eingebunden:
+
+ sudo ln -s /opt/homebrew/share/phpmyadmin /opt/homebrew/var/www/phpmyadmin
+
+Danach ist die Webanwendung  phpMyAdmin über die URL: http://localhost:8080/phpmyadmin erreichbar.
+Die Anmeldung mit dem Datenbank-Benutzer `root` und ohne Passwort funktioniert nicht.
+Aber das kannst du ignorieren, wir legen später einen Datenbankbenutzer an.
+
+==== Abschluss
+
+Nach der Installation von PHP 8.4, MariaDB, phpMyAdmin, Apache und VS Code ist deine Entwicklungsumgebung
+unter macOS vollständig eingerichtet. Damit stehen alle Werkzeuge bereit,
+um Joomla! 6 lokal auf deinem Mac zu installieren, zu konfigurieren und zu testen.
