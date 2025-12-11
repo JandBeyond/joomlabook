@@ -1,0 +1,82 @@
+<<<
+
+=== Firefox Werkzeuge für Web-Entwickler
+
+Moderne Browser wie Firefox, Chrome oder Edge bringen alle umfangreiche Entwicklertools mit,
+die dir beim Analysieren, Verstehen und Debuggen von Webseiten helfen.
+Sie unterscheiden sich im Detail, arbeiten aber nach dem gleichen Grundprinzip.
+Wir führen ganz kurz in die Verwendung am Beispiel des freien Webbrowsers Firefox ein.
+
+Öffne die Webseite, an der du arbeitest und
+starte dann die Werkzeuge aus dem Menü:
+
+Extras → Browser-Werkzeuge → Werkzeuge für Web-Entwickler
+
+Mit dem Kebab-Menü (die drei horizontalen Punkte) auf der rechten Seite kannst du die Werkzeuge platzieren,
+zum Beispiel rechts neben deiner Webseite, unter deiner Webseite oder als eigenes Browser-Fenster.
+
+.Firefox Werkzeuge
+image::media/03/werkzeuge.png[Firefox Werkzeuge]
+
+Zwischen den verschiedenen Werkzeuge kannst du mit den Reitern umschalten.
+Im Folgenden geben wir dir einen ersten Überblick über die Werkzeuge,
+die du während der Arbeit mit Joomla am häufigsten benötigen wirst.
+
+<<<
+
+==== Inspektor
+
+Wenn du das Inspektor-Werkzeug (mit dem Pfeil, ganz links) ausgewählt hast,
+dann kannst du in deiner Website (hier links) das zu untersuchende Element auswählen.
+Es wird dann dieser HTML-Code hervorgehoben und der CSS-Selektor-Pfad angezeigt.
+
+Der HTML-Code lässt sich nicht nur anzeigen, sondern per Doppelklick auf ein Element auch temporär bearbeiten.
+So kannst du zum Beispiel schnell einen anderen Überschrifttyp ausprobieren,
+ohne den Quellcode der Webseite ändern zu müssen.
+Die vorgenommenen Anpassungen werden sofort im Browser sichtbar und eignen sich ideal zum kurzfristigen Testen.
+
+.Firefox Werkzeug – Inspektor
+image::media/03/inspektor.png[Firefox Werkzeug – Inspektor]
+
+NOTE: Der Inspektor läßt sich auch schnell aus einer Website aufrufen.
+      Gehe zu dem Element, dass du analysieren willst und klicke mit der rechten Maustaste um
+      das Kontext-Menü zu öffnen. Dort findest du den Eintrag _Untersuchen_.
+      Wenn du darauf klickst, dann öffnet sich der Inspektor mit dieser Stelle im HTML-Code.
+
+<<<
+
+==== Stilbearbeitung
+
+Mit dem Reiter Stilbearbeitung läßt sich der CSS-Code untersuchen und ebenfalls per Doppelklick temporär bearbeiten.
+In dem Beispiel wird für die H1-Überschrift die Farbe auf rot geändert und sodort angezeigt.
+
+.Firefox Werkzeug – Stilbearbeitung
+image::media/03/stilbearbeitung.png[Firefox Werkzeug – Stilbearbeitung]
+
+Diese Funktion zur Änderung der CSS ist eine große Arbeitserleichterung.
+Auf einen Blick kannst du sehen, welche CSS-Eigenschaften an welcher Stelle des Codes angewendet werden oder vererbt sind.
+Dir bleibt viel aufwendige Sucharbeit erspart.
+
+==== Konsole
+
+Die Konsole eignet sich besonders gut,
+wenn du wissen willst, warum etwas nicht funktioniert oder ob ein bestimmter Codepfad überhaupt ausgeführt wird.
+Zum Beispiel für:
+
+* JavaScript Fehler und Meldungen,
+* CSS Fehler und Hinweise,
+* XMLHttpRequest (XHR) Anfragen,
+* HTTP-Anfragen nach HTML oder Bildern.
+
+.Firefox Werkzeug – Konsole
+image::media/03/konsole.png[Firefox Werkzeug – Konsole]
+
+==== Netzwerkanalyse
+
+Der Reiter Netzwerkanalyse zeigt dir jede einzelne Anfrage,
+die dein Browser sendet – also HTML, CSS, JavaScript, JSON, XHR-Requests, Bilder und vieles mehr.
+Für Joomla ist diese Ansicht äußerst hilfreich, um die Anzahl der Anfragen (62 in diesem Beispiel)
+die Summe aller übertragenen Daten (hier 2,25 Megabyte) und die Ladezeit (hier 781 Millisekunden) zu prüfen.
+
+.Firefox Werkzeug – Netzwerkanalyse
+image::media/03/netzwerk.png[Firefox Werkzeug – Netzwerkanalyse]
