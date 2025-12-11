@@ -8,43 +8,47 @@ In diesem Kapitel richtest du deine Arbeitsumgebung ein – gewissermaßen deine
 Für die Arbeit mit Joomla! brauchst du vor allem vier Programme:
 
 * die Programmiersprache _PHP_, um den Joomla!-Programmcode auszuführen,
-* eine Datenbank, um Konfigurationen und Inhalte abzulegen,
-* einen _Webserver_, um die dynamisch, mit PHP erzeugten Joomla!-Seiten auszuliefern und
+* eine _Datenbank_, um Konfigurationen und Inhalte abzulegen,
+* einen _Webserver_, um die dynamisch mit PHP erzeugten Joomla!-Seiten auszuliefern und
 * einen _Quelltext-Editor_, um die HTML-, CSS-, JavaScript- und PHP-Dateien zu bearbeiten.
 
 Diese Arbeitsumgebung kannst du bei einem Hoster als zusätzliche Test-Instanz einrichten.
-Oder, falls du bereits mit Docker oder Podman vertraut bist,
+Oder – falls du bereits mit Docker oder Podman vertraut bist –
 kannst du das offizielle Joomla! 6.0 Image als Container installieren.
-Oder – falls du nur die Administration üben möchtest – kannst du eine kostenlose Joomla!-Instanz unter
-https://launch.joomla.org erstellen.
+Wenn du nur die Administration üben möchtest,
+kannst du auch eine kostenlose Joomla!-Instanz unter https://launch.joomla.org erstellen.
 
-Wir empfehlen und beschreiben in diesem Kapitel den Aufbau einer lokalen Arbeitsumgebung auf dem eigenen Computer.
-Du kannst die Einrichtung entweder unter Ubuntu Linux 24 LTS, macOS oder Windows 11 vornehmen.
+Wir empfehlen und beschreiben in diesem Kapitel jedoch den Aufbau einer lokalen Arbeitsumgebung auf deinem eigenen Computer.
+Du kannst die Einrichtung unter Ubuntu Linux 24.04 LTS, macOS oder Windows 11 vornehmen.
 
-IMPORTANT: Die Einrichtung der lokalen Arbeitsumgebung erfolgt für das Testen und die Entwicklung.
+IMPORTANT: Die Einrichtung der lokalen Arbeitsumgebung erfolgt ausschließlich zum Testen und für die Entwicklung.
            Es werden keine Sicherheits- oder Performance-Anforderungen berücksichtigt.
            Die Arbeitsumgebung ist ausdrücklich nicht für den produktiven Einsatz im Internet geeignet.
 
+Für unsere Joomla! 6.0 Testumgebung verwenden wir:
+
+* PHP in der Version 8.4 als empfohlene Version für Joomla! 6,
+* MariaDB als Open-Source-Datenbank,
+* die freie Webanwendung phpMyAdmin zur Administration der Datenbank,
+* den Apache HTTP Server als Open-Source-Webserver und
+* Microsoft Visual Studio Code (VS Code) als Open-Source-Quelltext-Editor.
+
+Damit du später besser Fehler analysieren kannst, geben wir in diesem Kapitel
+auch einen kurzen Einstieg in die Browser-Werkzeuge für Web-Entwickler.
+Die grundlegenden Werkzeuge wie Inspektor, Konsole oder Netzwerkanalyse helfen dir,
+Probleme im Frontend schneller zu erkennen und zu beheben – eine wichtige Fähigkeit
+für Administrator:innen und Redakteur:innen im Joomla!-Alltag.
+
 <<<
 
-Für unser Joomla! 6.0 Test-Umgebung verwenden wir:
-
-* PHP in der Version 8.4, als die für Joomla! 6 empfohlene Version,
-* MariaDB als Open Source Datenbank,
-* die freie Webanwendung phpMyAdmin für die Administration der Datenbank,
-* Apache HTTP Server als Open Source Webserver und
-* Microsoft Visual Studio Code (VS Code) als OpenSource Quelltext-Editor.
-
-Abschließend geben wir in diesem Kapitel einen kurzen Einstieg in die
-Web Developer Tools, als Browser-Werkzeug in Mozilla Firefox.
-
-*Kommandos im Terminal*
+=== Kommandos im Terminal
 
 Wenn in den folgenden Beispielen ein Kommando im Terminal ausgeführt werden soll,
 verwende bitte Kopieren und Einfügen (Copy & Paste), um Tippfehler zu vermeiden.
-Bei mehreren aufeinanderfolgenden Kommandos bitte Zeile für Zeile kopieren
-und achte jeweils auf eine fehlerfreie Ausführung der Kommandos.
-Das folgende Beispiel sind zwei einzelne Kommandos:
+Bei mehreren aufeinanderfolgenden Kommandos kopiere bitte jede Zeile einzeln
+und achte darauf, dass jedes Kommando fehlerfrei ausgeführt wird.
+
+Das folgende Beispiel zeigt zwei einzelne Kommandos:
 
 [console,opts=keep-together]
 ----
@@ -53,11 +57,11 @@ uptime
 ----
 
 Wenn eine Zeile mit einem Backslash (`\`) endet,
-musst du immer auch die nächste Zeile mitnehmen – sonst fehlt dir ein Stück vom Befehl.
-Mit anderen Worten: Alle Zeilen, die mit einem `\` enden, gehören zusammen zu einem Kommando.
+musst du immer auch die nächste Zeile mitnehmen – sonst fehlt ein wichtiger Teil des Befehls.
+Mit anderen Worten: Alle Zeilen, die mit einem `\` enden, gehören zu einem einzigen Kommando.
 
 Hier ein Beispiel: Das folgende Kommando wird in drei Zeilen dargestellt und
-du musst es komplett in einem Stück kopieren:
+du musst es komplett als Block kopieren und einfügen:
 
 [console,opts=keep-together]
 ----
@@ -65,6 +69,22 @@ echo "Das ist eine längere Zeile, für das Buch, \
       die sich mit Backslashes \
       jeweils in die nächste Zeile rettet."
 ----
+
+=== Was du nach diesem Kapitel erreicht hast
+
+Nach Abschluss der folgenden Abschnitte wirst du:
+
+* eine vollständige lokale Arbeits-Umgebung für Joomla! 6.0 installiert haben,
+* PHP, MariaDB und Apache auf deinem System kennen und bedienen können,
+* phpMyAdmin zur Datenbankverwaltung nutzen können,
+* VS Code als Editor eingerichtet haben und wissen, wie du Joomla!-Dateien öffnest und bearbeitest,
+* und die grundlegenden Browser-Werkzeuge zur Fehlersuche einsetzen können.
+
+Damit bist du optimal vorbereitet, um Joomla! 6.0 nicht nur zu verwenden,
+sondern auch tiefer zu verstehen und sicher zu administrieren.
+
+NOTE: Wähle entsprechend deines Computers eines der drei folgenden Unterkapitel aus
+      und fahre danach direkt mit „Firefox Werkzeuge für Web-Entwickler” fort.
 
 include::abschnitte/01-linux.adoc[]
 

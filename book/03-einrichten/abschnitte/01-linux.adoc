@@ -157,6 +157,8 @@ sudo apt update
 sudo apt install code
 ----
 
+<<<
+
 VS Code lässt sich anschließend aus der Kommandozeile starten:
 
  code
@@ -168,3 +170,4 @@ image::media/03/vsc-linux.png[Visual Studio Code in Linux]
 
 Damit hast du deine Entwicklungsumgebung eingerichtet,
 um Joomla! 6 lokal unter Ubuntu Linux zu installieren, zu erweitern oder zu testen.
+Fahre nun mit dem Unterkapiel „Firefox Werkzeuge für Web-Entwickler” fort.

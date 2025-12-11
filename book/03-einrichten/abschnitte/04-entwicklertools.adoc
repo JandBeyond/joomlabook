@@ -2,81 +2,92 @@
 
 === Firefox Werkzeuge für Web-Entwickler
 
-Moderne Browser wie Firefox, Chrome oder Edge bringen alle umfangreiche Entwicklertools mit,
+Moderne Browser wie Firefox, Chrome oder Edge bringen umfangreiche Entwicklertools mit,
 die dir beim Analysieren, Verstehen und Debuggen von Webseiten helfen.
-Sie unterscheiden sich im Detail, arbeiten aber nach dem gleichen Grundprinzip.
-Wir führen ganz kurz in die Verwendung am Beispiel des freien Webbrowsers Firefox ein.
+Sie unterscheiden sich im Detail, funktionieren aber nach den gleichen Grundprinzipien.
+Wir geben dir hier einen kurzen Einstieg am Beispiel des freien Webbrowsers Firefox.
 
-Öffne die Webseite, an der du arbeitest und
-starte dann die Werkzeuge aus dem Menü:
+Öffne die Webseite, an der du arbeitest, und starte dann die Werkzeuge über das Menü:
 
 Extras → Browser-Werkzeuge → Werkzeuge für Web-Entwickler
 
-Mit dem Kebab-Menü (die drei horizontalen Punkte) auf der rechten Seite kannst du die Werkzeuge platzieren,
-zum Beispiel rechts neben deiner Webseite, unter deiner Webseite oder als eigenes Browser-Fenster.
+Mit dem Kebab-Menü (den drei horizontalen Punkten) auf der rechten Seite kannst du einstellen,
+wo die Werkzeuge eingeblendet werden – rechts neben der Webseite, unterhalb oder in einem separaten Fenster.
 
 .Firefox Werkzeuge
 image::media/03/werkzeuge.png[Firefox Werkzeuge]
 
-Zwischen den verschiedenen Werkzeuge kannst du mit den Reitern umschalten.
-Im Folgenden geben wir dir einen ersten Überblick über die Werkzeuge,
-die du während der Arbeit mit Joomla am häufigsten benötigen wirst.
+Zwischen den verschiedenen Werkzeugen kannst du über Reiter umschalten.
+Im Folgenden erhältst du einen Überblick über jene Funktionen,
+die du im Alltag mit Joomla! besonders häufig nutzen wirst.
 
 <<<
 
 ==== Inspektor
 
-Wenn du das Inspektor-Werkzeug (mit dem Pfeil, ganz links) ausgewählt hast,
-dann kannst du in deiner Website (hier links) das zu untersuchende Element auswählen.
-Es wird dann dieser HTML-Code hervorgehoben und der CSS-Selektor-Pfad angezeigt.
+Wenn du das Inspektor-Werkzeug (Symbol: Pfeil) aktiviert hast,
+kannst du ein beliebiges Element auf deiner Webseite auswählen.
+Der entsprechende HTML-Code wird hervorgehoben und der CSS-Selektor-Pfad angezeigt.
 
-Der HTML-Code lässt sich nicht nur anzeigen, sondern per Doppelklick auf ein Element auch temporär bearbeiten.
-So kannst du zum Beispiel schnell einen anderen Überschrifttyp ausprobieren,
-ohne den Quellcode der Webseite ändern zu müssen.
-Die vorgenommenen Anpassungen werden sofort im Browser sichtbar und eignen sich ideal zum kurzfristigen Testen.
+Der HTML-Code lässt sich nicht nur anzeigen, sondern auch temporär bearbeiten:
+Ein Doppelklick auf ein Element ermöglicht dir Teständerungen direkt im Browser.
+So kannst du zum Beispiel ausprobieren, wie eine andere Überschrift aussehen würde,
+ohne die Datei auf dem Server ändern zu müssen.
+Alle Änderungen wirken sofort – ideal zum schnellen Experimentieren.
 
 .Firefox Werkzeug – Inspektor
 image::media/03/inspektor.png[Firefox Werkzeug – Inspektor]
 
-NOTE: Der Inspektor läßt sich auch schnell aus einer Website aufrufen.
-      Gehe zu dem Element, dass du analysieren willst und klicke mit der rechten Maustaste um
-      das Kontext-Menü zu öffnen. Dort findest du den Eintrag _Untersuchen_.
-      Wenn du darauf klickst, dann öffnet sich der Inspektor mit dieser Stelle im HTML-Code.
+NOTE: Du kannst den Inspektor auch jederzeit aus einer Webseite heraus öffnen.
+      Einfach per Rechtsklick auf das gewünschte Element klicken,
+      wähle im Kontextmenü _Untersuchen_, der Inspektor öffnet sich und
+      springt direkt zur passenden Stelle im HTML-Code.
 
 <<<
 
 ==== Stilbearbeitung
 
-Mit dem Reiter Stilbearbeitung läßt sich der CSS-Code untersuchen und ebenfalls per Doppelklick temporär bearbeiten.
-In dem Beispiel wird für die H1-Überschrift die Farbe auf rot geändert und sodort angezeigt.
+Mit dem Reiter _Stilbearbeitung_ untersuchst du den CSS-Code und kannst ihn ebenfalls per Doppelklick temporär ändern.
+Im Beispiel wurde die Farbe einer H1-Überschrift auf Rot gesetzt – die Änderung erscheint sofort im Browser.
 
 .Firefox Werkzeug – Stilbearbeitung
 image::media/03/stilbearbeitung.png[Firefox Werkzeug – Stilbearbeitung]
 
-Diese Funktion zur Änderung der CSS ist eine große Arbeitserleichterung.
-Auf einen Blick kannst du sehen, welche CSS-Eigenschaften an welcher Stelle des Codes angewendet werden oder vererbt sind.
-Dir bleibt viel aufwendige Sucharbeit erspart.
+Diese Funktion ist gerade für Joomla!-Einsteiger:innen sehr hilfreich:
+Du siehst auf einen Blick, welche CSS-Eigenschaften aktiv sind, vererbt wurden oder überschrieben werden.
+Das erspart dir viel Sucharbeit in mehreren Stylesheets.
 
 ==== Konsole
 
-Die Konsole eignet sich besonders gut,
-wenn du wissen willst, warum etwas nicht funktioniert oder ob ein bestimmter Codepfad überhaupt ausgeführt wird.
-Zum Beispiel für:
+Die Konsole hilft dir dabei herauszufinden, warum etwas nicht funktioniert
+oder ob ein bestimmter Code überhaupt ausgeführt wird.
+Sie zeigt Meldungen und Fehler aus verschiedenen Bereichen an, etwa:
 
-* JavaScript Fehler und Meldungen,
-* CSS Fehler und Hinweise,
+* JavaScript-Fehler und Ausgaben,
+* CSS-Hinweise und -Warnungen,
 * XMLHttpRequest (XHR) Anfragen,
-* HTTP-Anfragen nach HTML oder Bildern.
+* HTTP-Anfragen für HTML, Bilder oder andere Dateien.
 
 .Firefox Werkzeug – Konsole
 image::media/03/konsole.png[Firefox Werkzeug – Konsole]
 
+<<<
+
 ==== Netzwerkanalyse
 
-Der Reiter Netzwerkanalyse zeigt dir jede einzelne Anfrage,
-die dein Browser sendet – also HTML, CSS, JavaScript, JSON, XHR-Requests, Bilder und vieles mehr.
-Für Joomla ist diese Ansicht äußerst hilfreich, um die Anzahl der Anfragen (62 in diesem Beispiel)
-die Summe aller übertragenen Daten (hier 2,25 Megabyte) und die Ladezeit (hier 781 Millisekunden) zu prüfen.
+Der Reiter **Netzwerkanalyse** zeigt jede einzelne Anfrage, die der Browser sendet:
+HTML, CSS, JavaScript, JSON, XHR-Requests, Bilder, Fonts und vieles mehr.
+Im Joomla!-Alltag ist diese Ansicht besonders nützlich,
+um die Anzahl der Anfragen, die übertragene Datenmenge und die Ladezeit deiner Seite zu prüfen.
 
 .Firefox Werkzeug – Netzwerkanalyse
 image::media/03/netzwerk.png[Firefox Werkzeug – Netzwerkanalyse]
+
+Beispielsweise zeigt dir Firefox an:
+
+* wie viele Dateien geladen werden (z. B. 62 Anfragen),
+* wie groß die gesamte Datenmenge ist (z. B. 2,25 MB),
+* wie lange der Seitenaufbau dauert (z. B. 781 ms).
+
+So kannst du gezielt Optimierungen vornehmen und nachvollziehen,
+welche Skripte oder Bilder deine Joomla!-Seite möglicherweise verlangsamen.
