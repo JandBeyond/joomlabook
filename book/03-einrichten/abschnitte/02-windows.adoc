@@ -1,0 +1,64 @@
+<<<
+
+=== Einrichten der Arbeitsumgebung unter Windows 
+
+Für die Einrichtung der Arbeitsumgebung unter Windows 11 empfiehlt sich Laragon als schlanke,
+schnelle und portable Komplettumgebung. Die nicht lizenzierte Nutzung ist für den privaten Gebrauch erlaubt.
+
+NOTE: Führe alle Installationen als normaler Benutzer aus und nicht mit Windows Administratorrechten.
+
+==== Laragon herunterladen und installieren
+
+1. Öffne die Webseite https://laragon.org/.
+2. Lade die aktuelle Version von _Laragon Full_ für Windows herunter.
+3. Starte den Installer und folge den Anweisungen.
+4. Übernehme bei der Installation die Standardeinstellungen:
+   * Standardpfad: `C:\laragon`
+   * Laragon mit Windows starten
+   * Virtuelle Hosts automatisch erzeugen
+
+Nach der Installation steht Laragon mit Apache, MySQL und einer vorkonfigurierten PHP-Version bereit.
+
+<<<
+
+==== PHP 8.4
+
+Standardmässig liefert Laragon mehrere PHP-Versionen mit. Falls PHP 8.4 noch nicht enthalten ist:
+
+1. Öffne das Laragon-Menü (links oben) → Tools → Quick add → PHP-8.4
+2. Wähle anschliessend im Menü PHP → Version → php-8.4.x
+
+.Laragon - Auswahl von PHP 8.4
+image::media/03/laragon.png[Laragon - Auswahl von PHP 8.4]
+
+Damit verwendet Laragon ab sofort PHP 8.4, die für Joomla! 6 empfohlene Version.
+
+<<<
+
+==== phpMyAdmin
+
+Da wir PHP 8.4 benutzen installieren wir phpMyAdmin in der Version 6:
+
+1. Öffne das Laragon-Menü (links oben) → Tools → Quick add → phpmyadmin-6.0snapshot
+2. Öffne lokal die Website http://localhost/phpmyadmin6/public und melde dich mit dem
+   Datenbankbenutzer `root` an und lasse das Kennwort leer.
+
+In der Webanwendung phpMyAdmin kannst du Datenbanken anlegen, Benutzer verwalten oder die Tabelleninhalte ansehen.
+
+==== Apache Webserver
+
+Laragon startet den Webserver Apache automatisch. Projekte im Ordner `C:\laragon\www\`
+werden über eigene virtuelle Hosts erreichbar, z. B.: `http://joomla6.test`
+
+Es genügt, ein neues Unterverzeichnis in `c:\laragon\www` anzulegen und die Joomla!-Dateien hinein zu kopieren.
+
+==== Visual Studio Code
+
+1. Lade VS Code für Windows von https://code.visualstudio.com/ herunter.
+2. Starte die Installation mit den Standardoptionen.
+3. Teste den Start von VS Code.
+
+==== Abschluss
+
+Damit hast du deine Entwicklungsumgebung eingerichtet,
+um Joomla! 6 lokal unter Windows 11 zu installieren, zu erweitern oder zu testen.
