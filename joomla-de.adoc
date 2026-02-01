@@ -7,6 +7,7 @@ German Joomla Community
 :pagenums:
 :front-cover-image: image:book/cover.png[width=1050,height=1600]
 :icons: font
+:figure-caption: Bild
 
 include::book/contributors.adoc[]
 

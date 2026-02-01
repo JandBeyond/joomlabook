@@ -1,0 +1,175 @@
+<<<
+
+=== Einrichten der Arbeitsumgebung unter Linux
+
+Die Einrichtung der Arbeitsumgebung unter Ubuntu Desktop Edition 24 LTS zeigen wir anhand von Kommandozeilen-Befehlen.
+Verwende einen Benutzer in der _sudo_-Gruppe, starte ein _Terminal_ und führe darin die folgenden Kommandos aus.
+
+Achte auf mögliche Fehlermeldungen, und nach jeder Installation kannst du mit einem kleinen Test
+die grundsätzliche Funktion prüfen.
+
+==== PHP 8.4
+
+Du startest mit dem
+Installieren von Abhängigkeiten und dem Hinzufügen des Repositorys von Ondřej Surý:
+
+[console,opts=keep-together]
+----
+sudo apt update
+sudo apt install -y software-properties-common
+sudo add-apt-repository -y ppa:ondrej/php
+sudo apt update
+----
+
+Installiere die Programmiersprache PHP 8.4:
+
+[console,opts=keep-together]
+----
+sudo apt install -y php8.4 php8.4-cli php8.4-common php8.4-fpm \
+    php8.4-mysql php8.4-xml php8.4-curl php8.4-zip php8.4-gd \
+    php8.4-mbstring php8.4-intl php8.4-opcache
+----
+
+Die erfolgreiche PHP Installation testest du mit:
+
+ php -v
+
+Das Kommando zeigt dann die PHP Hauptversion 8.4, wie für Joomla! 6 empfohlen.
+Patch-Version und Build-Datum können abweichen, zum Beispiel:
+
+ PHP 8.4.15 (cli) (built: Nov 20 2025 17:43:25) (NTS)
+
+<<<
+
+==== Apache Webserver
+
+Installiere den Apache Webserver mit:
+
+ sudo apt install -y apache2 libapache2-mod-php8.4
+
+Konfiguriere den Apache Webserver für das automatische Starten mit Ubuntu und starte ihn gleich:
+
+[console,opts=keep-together]
+----
+sudo systemctl enable apache2
+sudo systemctl start apache2
+----
+
+Prüfe den den Webserver mit dem Browseraufruf von http://localhost. Die Ubuntu Apache 2 Default Webseite ist zu sehen.
+Diese Website ist nur lokal und nur per HTTP in deinem Ubuntu erreichbar.
+
+.Ubuntu Apache 2 Default Website
+image::media/03/apache.png[Ubuntu Apache 2 Default Website]
+
+<<<
+
+==== MariaDB Datenbankserver
+
+Installiere den MariaDB Datenbankserver:
+
+ sudo apt install -y mariadb-server mariadb-client
+
+Konfiguriere den Datenbankserver ebenfalls für den automatischen Start und starte ihn:
+
+[console,opts=keep-together]
+----
+sudo systemctl enable mariadb
+sudo systemctl start mariadb
+----
+
+Du kannst nun mit dem Kommandozeilen-Klient die Datenbank überprüfen:
+
+ sudo mariadb -uroot -e 'SELECT VERSION();'
+
+Die Version des Datenbank-Servers wird angezeigt.
+Patch-Version und die Linux-Variante können abweichen, zum Beispiel:
+
+[console,opts=keep-together]
+----
++-----------------------------------+
+| VERSION()                         |
++-----------------------------------+
+| 10.11.13-MariaDB-0ubuntu0.24.04.1 |
++-----------------------------------+
+----
+
+NOTE: Zurzeit existiert nur der Datenbankbenutzer `root`, und dieser Benutzer hat kein Passwort gesetzt.  
+      Achtung: Dieser `root` ist nicht derselbe wie der Linux-Benutzer `root`.  
+      Um dich als Datenbankbenutzer `root` ohne Passwort anmelden zu dürfen,
+      musst du aus Sicherheitsgründen als Linux-Superuser auftreten.
+      Genau das haben wir eben mit `sudo` getan.
+
+<<<
+
+==== Webanwendung phpMyAdmin
+
+Dann installierst du die Webanwendung _phpMyAdmin_, um die Datenbank direkt im Browser zu administrieren:
+
+[console,subs="+quotes",opts=keep-together]
+----
+sudo apt install -y phpmyadmin
+
+Web server to reconfigure automatically: *apache2* *[Enter]*
+Configure database for phpmyadmin with dbconfig-common? [yes/no] *yes* *[Enter]*
+MySQL application password for phpmyadmin: *[Enter]*
+----
+
+Verlinke dann die Webanwendung in die _DocumentRoot_ des Webservers:
+
+ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+
+Danach ist die Webanwendung phpMyAdmin über die URL: http://localhost:8080/phpmyadmin erreichbar.
+Die Anmeldung mit dem Datenbank-Benutzer `root` und ohne Passwort funktioniert nicht.
+Aber das kannst du ignorieren, wir legen später einen Datenbankbenutzer an.
+
+<<<
+
+==== Installation von Visual Studio Code
+
+Visual Studio Code (VS Code) kann unter Ubuntu bequem über die offizielle Paketquelle von Microsoft installiert werden.
+
+Zunächst werden die benötigten Pakete für das Herunterladen und Verarbeiten der Repository-Schlüssel installiert:
+
+ sudo apt install -y wget gpg apt-transport-https
+
+Der GPG-Microsoft-Signaturschlüssel wird direkt von Microsoft geladen,
+in das richtige Format konvertiert und im System abgelegt:
+
+[console,opts=keep-together]
+----
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc \
+     | gpg --dearmor \
+     | sudo tee /usr/share/keyrings/ms_vscode_key.gpg > /dev/null
+----
+
+Im nächsten Schritt wird das offizielle VS-Code-Repository als Paketquelle registriert:
+
+[console,opts=keep-together]
+----
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/ms_vscode_key.gpg] \
+     https://packages.microsoft.com/repos/vscode stable main" \
+     | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+----
+
+Nach dem Aktualisieren der Paketlisten kann Visual Studio Code installiert werden:
+
+[console,opts=keep-together]
+----
+sudo apt update
+sudo apt install code
+----
+
+<<<
+
+VS Code lässt sich anschließend aus der Kommandozeile starten:
+
+ code
+
+.Visual Studio Code in Linux
+image::media/03/vsc-linux.png[Visual Studio Code in Linux]
+
+==== Abschluss
+
+Damit hast du deine Entwicklungsumgebung eingerichtet,
+um Joomla! 6 lokal unter Ubuntu Linux zu installieren, zu erweitern oder zu testen.
+Fahre nun mit dem Unterkapiel „Firefox Werkzeuge für Web-Entwickler” fort.
