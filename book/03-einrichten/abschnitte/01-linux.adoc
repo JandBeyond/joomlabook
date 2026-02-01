@@ -34,7 +34,8 @@ Die erfolgreiche PHP Installation testest du mit:
 
  php -v
 
-Das Kommando zeigt dann die PHP Hauptversion 8.4, wie für Joomla! 6 empfohlen:
+Das Kommando zeigt dann die PHP Hauptversion 8.4, wie für Joomla! 6 empfohlen.
+Patch-Version und Build-Datum können abweichen, zum Beispiel:
 
  PHP 8.4.15 (cli) (built: Nov 20 2025 17:43:25) (NTS)
 
@@ -80,7 +81,8 @@ Du kannst nun mit dem Kommandozeilen-Klient die Datenbank überprüfen:
 
  sudo mariadb -uroot -e 'SELECT VERSION();'
 
-Die Version des Datenbank-Servers wird angezeigt:
+Die Version des Datenbank-Servers wird angezeigt.
+Patch-Version und die Linux-Variante können abweichen, zum Beispiel:
 
 [console,opts=keep-together]
 ----
