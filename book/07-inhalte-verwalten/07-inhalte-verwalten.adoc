@@ -43,7 +43,7 @@ das aus Kapitel 5, „Grundlegende Begriffe und Architektur“, bekannte
 Kategorienschema (vgl. Bild 5.3) noch ein wenig erweitern, um die neu
 hinzugekommenen Inhalte einordnen zu können.
 
-image:book/07-inhalte-verwalten/media/1.png[C:++\++Users++\++hwunder++\++Desktop++\++rtf++\++7++\++Bild506.PNG,width=376,height=281]
+[Bild ersetzen]
 
 BILD 7.1 Ergänzte Inhaltsstruktur zur Abbildung der gewünschten
 Seitenstruktur aus Tabelle 7.1
