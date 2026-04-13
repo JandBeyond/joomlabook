@@ -26,7 +26,6 @@ nach Anwendungsbereich gegliederte Bereiche (siehe Boxen im unteren
 Bereich) teilt. Zudem gibt es eine Suchfunktion, die das Finden der
 benötigten Funktion erleichtern soll.
 
-image:book/10-erweiterungen/media/38.png[book/10-erweiterungen/media/38,width=548,height=372]
 
 BILD 10.18 Offizielles Joomla! Extensions Directory
 
