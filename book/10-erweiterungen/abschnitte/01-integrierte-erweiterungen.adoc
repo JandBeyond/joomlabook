@@ -28,7 +28,6 @@ bereits zu einem in Joomla! registrierten Benutzer zugeordnet ist. Über
 diese Verknüpfungsfunktion ist es möglich, die Autorenangabe eines
 Inhalts mit dem Kontaktformular des jeweiligen Nutzers zu verlinken.
 
-image:book/10-erweiterungen/media/2.png[book/10-erweiterungen/media/2,width=548,height=130]
 
 BILD 10.1 Übersichtsliste der _Kontakt_-Komponente
 
