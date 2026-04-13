@@ -1,5 +1,3 @@
-[[08-navigationsstruktur]]
-
 == Navigationsstruktur anlegen
 
 Im vorherigen Kapitel haben wir die benötigten Texte und Bilder in die

@@ -1,0 +1,133 @@
+== Performance-Optimierungen
+
+Insbesondere im professionellen Umfeld trifft man immer wieder auf
+hochfrequentierte Webseiten, bei denen es enorm wichtig ist, dass das
+verwendete CMS sparsam mit den Ressourcen des entsprechenden Servers
+umgeht, um eine Vielzahl von Nutzern gleichzeitig bedienen zu können.
+Außerdem ist es auch bei kleinen, wenig frequentierten Seiten wichtig,
+die Ladezeit der Seite größtmöglich zu reduzieren, um den Nutzer nicht
+zu frustrieren und dadurch die Absprungrate zu senken. Dabei spielt eine
+große Vielzahl von Faktoren eine Rolle, die dabei zwar nicht alle
+unbedingt Joomla!-spezifisch sind, dennoch aber großen Einfluss auf die
+„gefühlte“ Geschwindigkeit haben.
+
+Dafür ist wichtig zu verstehen, dass die letztendliche Ladezeit beim
+Endnutzer aus zwei verschiedenen Komponenten besteht:
+
+[arabic]
+. Die Zeit, die Joomla! zur Generierung der Seite benötigt. Wichtige
+Faktoren sind hierbei die Anzahl der ausgeführten Datenbankabfragen, die
+allgemeine Performance des Serversystems, etwaige Abfragen bei externen
+Diensten (z. B. durch Wetter-Module) sowie die Menge der verarbeiteten
+Daten.
+. Die Zeit, die der Browser zum Rendern der ausgelieferten Seite
+benötigt. Entscheidend sind hier die Anzahl und Größe der zu ladenden
+Grafiken, Skripte und CSS-Dateien, die Menge und Komplexität des
+HTML-Codes sowie die allgemeine Performance des jeweiligen Rechners,
+Browsers und Internetanschlusses.
+
+Diese Unterscheidung ist wichtig, da sich die beiden Bereiche in ihren
+Auswirkungen äußerst unterschiedlich verhalten.
+
+Wie beurteilen wir also die Geschwindigkeit einer solchen Seite? Zum
+Ersten bieten sich hier natürlich zahlreiche Webdienste wie _Googles
+Pagespeed_ _Insights_
+(https://developers.google.com/speed/pagespeed/insights/?hl=de ) oder
+_Load Impact_ ([.underline]#www.loadimpact.com#) an, aber auch
+zahlreiche im Browser integrierte Tools wie die _Pagespeed-Erweiterung_
+für Chrome und Firefox erfüllen ihren Zweck und geben wertvolle Tipps.
+Insbesondere für die Analyse der Seitengenerierung liefert Joomla!
+jedoch bereits ein wunderbares Tool mit: den integrierten Debug-Modus,
+der in der Joomla!-Konfiguration aktiviert wird.
+
+image:book/20-performace-optimierungen/media/2.png[book/20-performace-optimierungen/media/2,width=548,height=260]
+
+BILD 20.1 Aktivierung des System-Debug-Modus von Joomla!
+
+[width="99%",cols="14%,86%",options="header",]
+|===
+|CHV++_++BOX++_++ID++_++02 |
+|icn002 |*Hinweis:* Die Aktivierung des Debug-Modus sollte niemals auf
+einer öffentlich zugänglichen Seite vorgenommen werden, da hierbei
+sensible Informationen zugänglich werden könnten. Schützen Sie eine
+entsprechende Live-Site für die Dauer Ihrer Analyse mit einer
+_.htaccess_-Datei. Alternativ können Sie den Debug-Modus auf eine
+bestimmte Benutzergruppe beschränken, die Sie in den Optionen des
+Debug-Plug-ins auswählen können.
+|===
+
+Nun gibt Joomla! beim Aufruf am unteren Seitenende zahlreiche
+Informationen über die Generierung der Seite aus, die wir als Grundlage
+für die weitere Optimierung nutzen können. Konkret handelt es sich dabei
+um das sogenannte _Profil zum Laufzeitverhalten_ sowie eine Liste der
+ausgeführten _Datenbankabfragen_.
+
+Das Profil zum Laufzeitverhalten gibt an, welche Schritte zur
+Generierung der Seite nötig waren und wie viel Arbeitsspeicher und Zeit
+jeder einzelne Schritt in Anspruch genommen hat. Joomla! unterscheidet
+dabei zwischen dem Laden des Frameworks (_afterLoad, afterInitialise,
+afterRoute_), dem Ausführen der Komponente (_afterDispatch_) und dem
+Rendern der jeweiligen Module (_beforeRenderModule_). Der erste Wert
+einer jeden Zeile gibt an, wie viel Zeit der jeweilige Schritt benötigt
+hat. Der Wert dahinter zeigt die Zeit, seit Beginn der Generierung
+insgesamt vergangen ist.. Analog wird mit dem Arbeitsspeicherverbrauch
+umgegangen, der in MB angegeben wird, und am Ende der Zeile findet sich
+der Titel des jeweiligen Schritts.
+
+image:book/20-performace-optimierungen/media/4.png[book/20-performace-optimierungen/media/4,width=548,height=403]
+
+BILD 20.2 Ausgabe bei aktiviertem Debug-Modus
+
+Interessant an dieser Auflistung ist insbesondere der Wert für die
+Gesamtgenerierungszeit der Seite, den wir in der letzten Zeile des
+Profils finden – in Bild 20.2 läge diese bei z. B. 0,209 Sekunden. Wenn
+Sie mit Performanceproblemen zu kämpfen haben, liegt dies oftmals an
+einer zu hohen Generierungszeit, die sich entweder auf eine bestimmte
+Komponente, ein bestimmtes Modul oder auf die allgemeine
+Leistungsfähigkeit des Servers zurückführen lässt. Als Faustwert gilt,
+dass Generierungszeiten, die länger als eine Sekunde andauern, von
+Besuchern als störend empfunden werden. Werte, die unter 0,3 Sekunden
+liegen, erlauben flüssiges Arbeiten.
+
+image:book/20-performace-optimierungen/media/6.png[book/20-performace-optimierungen/media/6,width=548,height=51]
+
+BILD 20.3 Beispiel eines extrem langsamen Moduls mit mehr als zwei
+Sekunden Generierungszeit
+
+Ebenfalls interessant ist die Anzahl der ausgeführten MySQL-Abfragen. Da
+der Joomla!-Kern verhältnismäßig sparsam mit den entsprechenden Abfragen
+umgeht, ist die Schuld für hohe Werte (++>++ 100 Abfragen) oftmals bei
+externen Erweiterungen zu suchen. Sollten Sie ein solches Exemplar
+erwischt haben, lohnt es sich unter Umständen, die Nutzung einer
+alternativen Erweiterung in Betracht zu ziehen oder den Code der
+Extensions selber zu optimieren, was sich jedoch in der Regel schwierig
+gestaltet.
+
+[width="99%",cols="14%,86%",options="header",]
+|===
+a|
+[arabic]
+. CHV++_++BOX++_++ID++_++01
+
+|
+a|
+[arabic, start=2]
+. icn001
+
+a|
+[arabic, start=3]
+. *Praxistipp:* Die Generierungszeiten können je nach aktueller
+Systemlast und Netzwerkauslastung stark schwanken, weshalb für
+repräsentative Mittelwerte mehrere Messungen im Debug-Modus durchgeführt
+werden sollten.
+
+|===
+
+Mit diesen Ausgangswerten können wir uns nun um die Optimierung der
+Generierungszeit kümmern.
+
+include::abschnitte/01-generierungszeit.adoc[]
+
+include::abschnitte/02-html.adoc[]
+
+include::abschnitte/03-auslieferung.adoc[]

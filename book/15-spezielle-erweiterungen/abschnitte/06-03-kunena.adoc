@@ -1,9 +1,0 @@
-==== Kunena
-
-Da in vielen Communitys auch eine Forensoftware benötigt wird, aber
-weder _JomSocial_ noch _Community Builder_ von Haus aus eine
-entsprechende Lösung mitbringen, empfiehlt sich hier der Einsatz der
-Joomla!-Forenkomponente _Kunena_. _Kunena_ wird aktiv weiterentwickelt,
-ist dank zahlreicher Optimierungen auch bei vielen Posts noch sehr
-performant und lässt sich über unzählige Parameter gut an die eigenen
-Bedürfnisse anpassen.

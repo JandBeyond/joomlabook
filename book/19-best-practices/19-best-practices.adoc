@@ -1,0 +1,13 @@
+== Best Practices
+
+Durch den Einsatz von Joomla! in zahlreichen Kundenprojekten habe ich
+einige Tipps und Herangehensweisen gesammelt, die ich Ihnen in Form
+dieses Kapitels gerne vorstellen möchte. Beachten Sie aber bitte auch
+die Praxistipps aus Kapitel 6, „Das Backend“, die ebenfalls in meiner
+Arbeit entstanden sind.
+
+include::abschnitte/01-einstellungen.adoc[]
+
+include::abschnitte/02-adminmenu.adoc[]
+
+include::abschnitte/03-fortbildung.adoc[]

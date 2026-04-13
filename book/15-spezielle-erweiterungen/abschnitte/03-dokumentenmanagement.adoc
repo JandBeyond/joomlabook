@@ -1,8 +1,0 @@
-=== Dokumentenmanagement
-
-==== jDownloads
-
-Beim Aufbau komplexerer Download-Verzeichnisse setze ich im Regelfall
-auf die Erweiterung _jDownloads_, die ausreichend Features bietet, um
-gängige Anwendungsfälle abzu­decken und sich dank zahlreicher Parameter
-und gutem Code auch leicht anpassen lässt.

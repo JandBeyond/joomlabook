@@ -1,9 +1,0 @@
-==== _J2Store_
-
-Die Erweiterung _J2Store_ ist mein persönlicher Tipp für die
-Realisierung kleinerer Shops mit einer überschaubaren Anzahl an
-Produkten und Funktionen. Die Erweiterung versucht, anders als viele
-Konkurrenzprodukte, garnicht erst eine allumfassende Lösung für jeden
-Bedarf zu sein, sondern konzentriert sich auf die gängigsten
-Anwendungsfälle. Das macht die Erweiterung sehr übersichtlich und
-angenehm in der Bedienung.

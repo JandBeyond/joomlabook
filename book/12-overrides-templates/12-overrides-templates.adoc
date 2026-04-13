@@ -1,4 +1,4 @@
-== Overrides / Template Workshop
+== Overrides
 
 include::abschnitte/01-overrides-layouts.adoc[]
 
@@ -8,8 +8,4 @@ include::abschnitte/03-template-frameworks.adoc[]
 
 include::abschnitte/04-css-frameworks.adoc[]
 
-include::abschnitte/05-taskrunner.adoc[]
-
-include::abschnitte/06-barrierefreiheit.adoc[]
-
-include::abschnitte/07-backentemplate.adoc[]
+include::abschnitte/05-backentemplate.adoc[]
