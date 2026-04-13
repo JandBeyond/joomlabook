@@ -1,6 +1,6 @@
 === Felder anlegen – so geht es!
 
-Im Kapitel 16.1.2 haben Sie bereits alle Einstellungsmöglichkeiten und
+Im Kapitel 17.02 haben Sie bereits alle Einstellungsmöglichkeiten und
 Feldtypen kennengelernt. Bevor Sie ein neues Feld anlegen, ist es
 sinnvoll zunächst eine Feldgruppe anzulegen, der das Feld zugeordnet
 wird. Es erscheint dann je nach Komponente, in der es eingebunden ist,
@@ -20,20 +20,20 @@ eingeblendeten Feldern im entsprechenden Tab erscheint.
 
 ===== Neue Feldgruppe im Benutzer-Manager
 
-Klicken Sie auf Benutzer » FeldGRUPPEN und dann auf den grünen Button
+Klicken Sie auf BENUTZER » FELDGRUPPEN und dann auf den grünen Button
 NEU.
 
 ===== Neue Feldgruppe für Beiträge und Kategorien
 
 Um eine neue Feldgruppe für Beiträge oder Kategorien anzulegen, klicken
-Sie auf Inhalt » FeldGRuPPEN. Links vom Suchfeld befindet sich eine
+Sie auf INHALT » FELDGRUPPEN. Links vom Suchfeld befindet sich eine
 sogenannte _Kontextauswahl_. Hier können Sie wählen, ob Sie die
 Feldgruppe für _Beiträge_ anlegen wollen oder für _Kategorien_.
 
 ===== Neue Feldgruppe für Kontakte, Kontaktformular und Kontaktkategorien
 
 Feldgruppen für _Kontakte_, das _Kontaktformular (E-Mail)_ und
-_Kategorien_ können über Komponenten » Kontakte » Feldgruppen erstellt
+_Kategorien_ können über KOMPONENTE » KONTAKTE » FELDGRUPPEN erstellt
 werden. Wählen Sie links vom Suchfeld aus, welchem Bereich die Gruppe
 zugeordnet werden soll.
 
@@ -41,7 +41,7 @@ zugeordnet werden soll.
 
 Neue Felder können Sie in der jeweiligen Komponente unter Felder
 erstellen. Klicken Sie auf den grünen Button NEU und bearbeiten Sie die
-Feldeinstellungen wie im Kapitel 16.1.2 beschrieben.
+Feldeinstellungen wie im Kapitel 17.02 beschrieben.
 
 [width="99%",cols="14%,86%",options="header",]
 |===
@@ -55,22 +55,50 @@ nicht erlaubt.
 ===== Neues Feld im Benutzer-Manager
 
 Wollen Sie bei der Benutzerregistrierung weitere Informationen vom
-Nutzer abfragen, dann klicken Sie im Backend auf Benutzer » Felder und
-dann auf den Button Neu.
+Nutzer abfragen, dann klicken Sie im Backend auf BENUTZER » FELDER und
+dann auf den Button NEU.
 
 ===== Neues Feld für Beiträge und Kategorien
 
 Um ein neues Feld für Beiträge oder Kategorien anzulegen, klicken Sie
-auf Inhalt » Felder. Links vom Suchfeld befindet sich die
+auf INHALT » FELDER. Links vom Suchfeld befindet sich die
 _Kontextauswahl_. Hier können Sie wählen, ob Sie das Feld für _Beiträge_
 anlegen wollen oder für _Kategorien_.
 
 ===== Neues Feld für Kontakte, Kontaktformular und Kontaktkategorien
 
 Sie können neue Felder für _Kontakte_, das _Kontaktformular (E-Mail)_
-und _Kategorien_ über Komponenten » Kontakte » FeldER erstellen. Wählen
+und _Kategorien_ über KOMPONENTE » KONTAKTE » FELDER erstellen. Wählen
 Sie links vom Suchfeld aus, welchem Bereich das Feld zugeordnet werden
 soll.
+
+===== Subforms anlegen
+
+Zunächst erstellen Sie einzelne Custom Fields in der jeweiligen Komponente, 
+die später als Unterfelder (Sub-Fields) innerhalb des Subform-Feldes verwendet 
+werden. Dabei kann es sich beispielsweise um ein URL-Feld für externe Links 
+handeln. Anschließend markieren Sie diese Felder mit der Option 
+„Nur in Subforms verwenden“, sofern sie ausschließlich innerhalb eines Subforms 
+eingesetzt werden sollen. 
+Dadurch stellen Sie sicher, dass diese Felder nicht eigenständig in Artikeln 
+oder anderen Inhalten angezeigt werden, sondern nur im Kontext des jeweiligen 
+Subform-Feldes zur Verfügung stehen.
+
+Mit Subforms entstehen im Backend für Redakteure ein übersichtlicher Eingabebereich, 
+in dem sie mehrfach Einträge (z. B. mehrere zugehörige Links, Bilder oder Ansprechpartner) 
+erfassen können.
+
+====== Praxisbeispiel für Subforms: Zugehörige externe Links
+
+Angenommen, Sie möchten pro Artikel mehrere externe Links erfassen, erstellen Sie 
+zunächst ein Feld mit der Bezeichnung „Zugehörige URL“ vom Typ URL und aktivieren 
+die Option „Only Use In Subform“. Anschließend legen Sie ein Subform-Feld mit dem 
+Namen „Zugehörige Informationen“ an und fügen dort das Feld „Zugehörige URL“ als 
+Unterfeld (Child-Field) hinzu. Auf diese Weise können Redakteurinnen und Redakteure 
+beliebig viele externe Links zu einem Artikel erfassen und verwalten.
+
+.Subformfeld im Layout Formular
+image::17/07_subformfeld-formular.png[Subformfeld im Layout Formular]
 
 ==== Feld-Reihenfolge ändern
 
@@ -79,9 +107,8 @@ Felder nachträglich beeinflussen. Klicken Sie dazu auf die Sortierpfeile
 im Tabellenkopf und sortieren Sie dann die Felder per _Drag & Drop_ an
 die gewünschte Position.
 
-image:media/image6.jpg[media/image6,width=548,height=281]
-
-Bild 16.6 – Reihenfolge der Feldanzeige ändern
+.Reihenfolge der Feldanzeige ändern
+image::17/08_reihenfolge_felder_aendern.png[Reihenfolge der Feldanzeige ändern]
 
 ==== Mehrsprachigkeit
 
@@ -106,3 +133,4 @@ haben Sie gleich die multilinguale Version von „_Ja_“ (analog *JNO* für
 Verfügung stellt, finden Sie in der globalen Sprachdatei
 _/language/de-DE/de-DE.ini_.
 |===
+

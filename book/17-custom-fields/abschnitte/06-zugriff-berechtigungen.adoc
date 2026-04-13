@@ -7,9 +7,8 @@ Die Anzeige des Felds steuern Sie über den Parameter _Zugriffsebene_ im
 Reiter Allgemein. Hier ist sowohl die Anzeige des Eingabefelds als auch
 des Ausgabefelds gemeint.
 
-image:media/image10.jpg[media/image10,width=548,height=336]
-
-Bild 16.10 Zugriff für die Anzeige eines Felds und dessen Ausgabe
+.Zugriff für die Anzeige eines Felds und dessen Ausgabe
+image::17/12_anzeige_zugriff_feld.png[Zugriff für die Anzeige eines Felds und dessen Ausgabe]
 
 In der Feldbearbeitung unter dem Reiter Berechtigungen finden Sie die
 Benutzergruppen-Einstellungen für das _Löschen_, _Bearbeiten_, _Status
@@ -21,6 +20,5 @@ Dennoch sollten Sie bei diesen Einstellungen sicher wissen, was Sie tun.
 Wenn Sie das Mediafeld für die Öffentlichkeit zur Verfügung stellen,
 kann jeder auf Ihren _image_-Ordner zugreifen.
 
-image:media/image11.jpg[media/image11,width=548,height=336]
-
-Bild 16.11 - Berechtigungen für das Editieren eines Felds
+.Berechtigungen für das Editieren eines Felds
+image::17/13_berechtigungen_feld_editieren.png[Berechtigungen für das Editieren eines Felds]

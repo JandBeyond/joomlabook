@@ -1,9 +1,8 @@
 === Feldtypen
 
-Die Grundausstattung, die Sie gegenwärtig in Joomla! 3.7 mit „Eigene
-Felder” erhalten, ist eine kleine Auswahl von Eingabefeldern, die auf
-_JForm_ (siehe Kapitel 17.3.11.1) basieren. Sie können sowohl weitere
-_JForm_-Felder für „Eigene Felder” verfügbar machen, als auch eigene
+Die Grundausstattung, die Sie gegenwärtig mit „Eigene Felder” erhalten,
+ist eine kleine Auswahl von Eingabefeldern. Sie können sowohl weitere 
+Felder für „Eigene Felder” verfügbar machen, als auch eigene 
 Custom-Fields-Plug-ins entwickeln.
 
 ==== Gemeinsame Grundeinstellungen
@@ -12,9 +11,8 @@ Die Eigenen Felder haben einige gemeinsame Einstellungen. Folgende
 Basiseinstellungen können im ersten Reiter „Allgemein“ vorgenommen
 werden.
 
-image:media/image1.jpg[media/image1,width=548,height=378]
-
-Bild 16.1 Grundeinstellungen der Felder
+.Grundeinstellungen der Felder
+image::17/01_felder_grundeinstellungen.png[Grundeinstellungen der Felder]
 
 ===== Titel
 
@@ -27,7 +25,7 @@ Titel, falls kein Label festgelegt wurde.
 In diesem Feld wählen Sie einen Feldtyp aus. Sobald Sie einen Typ
 festgelegt und das Feld gespeichert haben, wird dieser Typ festgesetzt
 und kann nicht mehr geändert werden. Die verschiedenen Joomla!-Core
-Feldtypen-werden im Kapitel 16.1.2.3 näher beschrieben.
+Feldtypen-werden im Kapitel 16.02 näher beschrieben.
 
 ===== Name
 
@@ -52,6 +50,12 @@ Tooltip, wenn man mit der Maus über die Feldbeschriftung fährt.
 Wenn Sie nicht möchten, dass vergessen wird, ein Feld auszufüllen,
 können Sie es als Pflichtfeld kennzeichnen. Das Formular wird erst
 gespeichert, wenn alle obligatorischen Felder ausgefüllt sind.
+
+===== Nur in Subform benutzen
+
+Mit dieser Option wird das Feld nur innerhalb eines Subforms verwendet. 
+Das Feld erscheint dann nicht als einzelnes Feld in der ausgewählten 
+Feldgruppe oder in einem eigenen Tab.
 
 ===== Standardwert
 
@@ -100,9 +104,10 @@ hinterlegen.
 Im Reiter „Optionen“ können detaillierte Feldeinstellungen vorgenommen
 werden. Diese Einstellungen sind ebenso für alle Felder gleich.
 
-image:media/image2.jpg[media/image2,width=548,height=327]
+.Generelle Feldeinstellungen im Reiter „Optionen“
+image::17/02_optionen_grundeinstellungen.png[Generelle Grundeinstellungen im Reiter Optionen]
 
-Bild 16.2 – Generelle Feldeinstellungen im Reiter „Optionen“
+==== Eingabemaske-Optionen
 
 ===== Platzhalter
 
@@ -110,20 +115,15 @@ Ein Platzhaltertext, der innerhalb des Felds als Eingabehilfe angezeigt
 wird. Diese Einstellung greift nur bei Feldern, die eine Texteingabe
 erwarten und nicht bei Mehrfach-Auswahlen oder Dropdown Feldern.
 
-===== Ausgabe Klasse
+===== CSS-Klasse Feld
 
-Die Ausgabe-Klasse wird in den Container hinzugefügt, der um das Feld in
-der Ausgabe herumgelegt wird.
+Die “CSS Klasse Feld” wird in den Container hinzugefügt, der um das Eingabefeld 
+herumgelegt wird.
 
-===== Eingabefeld Klasse
+===== CSS-Klasse Label
 
-Die Eingabeklasse wird dem Container hinzugefügt, der um das Eingabefeld
-herum ausgegeben wird.
-
-===== Beschriftung anzeigen
-
-Legen Sie fest ob die Feldbeschriftung bzw. das Label in der Feldausgabe
-dargestellt oder ausgeblendet werden soll.
+Die “CSS-Klasse Label” wird dem Container hinzugefügt, der um das Label des 
+Eingabefeldes herum ausgegeben wird.
 
 ===== Einsatzbereich
 
@@ -131,17 +131,109 @@ Sie können das Feld nur im Frontend, also auf der Seite, im Backend oder
 in beiden Bereichen anzeigen. Wählen Sie an dieser Stelle Ihre
 gewünschte Option aus.
 
+===== Anzeigebedingung
+
+Hier können Sie das Feld in Abhängigkeit anderer Felder anzeigen lassen. 
+Es handelt sich hierbei um die showon-Funktion, die für alle Formularfelder 
+zur Verfügung stehen. Die Abhängigkeitsfunktion ist nur in Kombination mit 
+den Feldern Kontrollkästchen (Checkboxes) und Optionsfeld (Radio) möglich.
+
+====== Beispiel: 
+
+Das Feld „Text1” soll nur angezeigt werden, wenn im Optionsfeld „Auswahl” der 
+Wert „ja” ausgewählt wurde. 
+
+Der Text in der Anzeigebedingung lautet dann: 
+
+auswahl:ja
+
+Es sind auch Kombinationen möglich:
+
+Mit [AND] wird das Feld nur angezeigt, wenn mehrere Felder einen bestimmten Wert 
+enthalten. 
+
+====== Beispiel: 
+
+auswahl:ja[AND]anzahl:eins -> Das Feld wird angezeigt, wenn das Feld auswahl den 
+Wert ja UND das Feld anzahl den Wert eins enthält.
+
+Mit [OR] wird das Feld nur angezeigt, wenn nur eines der Felder einen bestimmten 
+Wert enthält. 
+
+Beispiel: 
+
+auswahl:ja[OR]anzahl:eins -> Das Feld wird angezeigt, wenn das Feld auswahl den Wert 
+ja ODER das Feld anzahl den Wert eins enthält.
+
+Wenn das Feld bei mehreren Werten eines Auswahlfeldes angezeigt werden soll, dann 
+können diese Werte mit Komma getrennt eingegeben werden. 
+
+====== Beispiel: 
+
+auswahl:ja,vielleicht -> das Feld wird angezeigt, wenn das Feld auswahl den Wert ja 
+oder vielleicht enthält.
+
+===== Ausgabe-Optionen
+
+===== CSS-Klasse Ausgabe
+
+Die “CSS-Klasse Label” wird dem Container hinzugefügt, der um das Label und das 
+Eingabefeld herum ausgegeben wird.
+
+===== CSS-Klasse
+
+Die “CSS-Klasse Label” wird dem Container hinzugefügt, der nur um das Eingabefeld 
+herum ausgegeben wird.
+
+===== Beschriftung anzeigen
+
+Legen Sie fest ob die Feldbeschriftung bzw. das Label in der Feldausgabe
+dargestellt oder ausgeblendet werden soll.
+
+===== CSS-Klasse Beschriftung
+
+Die “CSS-Klasse Label” wird dem Container hinzugefügt, der nur um das Label herum 
+ausgegeben wird.
+
 ===== Automatische Anzeige
 
 Die Felder können auf Wunsch bei verschiedenen Trigger Events
 automatisch angezeigt werden. Wählen Sie zwischen „Nach Inhalt (After
 Display)“, „vor Inhalt (Before Display)“, „nach Titel (After Title)“
 oder keiner automatischen Anzeige. Mehr zur automatischen Anzeige finden
-Sie auch im Kapitel 16.1.5.1
+Sie auch im Kapitel 17.05.
+
+===== Präfix
+
+Hier kann dem Feld für die Ausgabe ein Präfix vorangestellt werden. Dieser wird 
+dann in jedem Beitrag mit diesem Feld davor ausgegeben und muss nicht jedes Mal mit 
+eingegeben werden.
+
+===== Suffix
+
+Hier kann dem Feld für die Ausgabe ein Suffix hinten angehängt werden. Dieser wird dann 
+in jedem Beitrag mit diesem Feld danach ausgegeben und muss nicht jedes Mal mit 
+eingegeben werden.
+
+===== Layout
+
+Hier kann für das Feld ein anderes Layout ausgewählt werden, wenn vorhanden.
+
+===== Anzeigen, wenn schreibgeschützt
+
+Es können 3 Möglichkeiten ausgewählt werden: Vererbt, Ja, Nein.
+
+===== Suchindex
+
+Standardmäßig ist ein Feld nicht durchsuchbar, das heißt, es wird nicht indexiert, wenn 
+die Suche aktiviert wird. Damit ein Feld in die Suche mit aufgenommen werden kann, muss 
+die Auswahl hier auf  „Durchsuchbar machen” geändert werden. Je nach Einstellung des 
+Suchindex kann es auch als Taxonomie hinzugefügt werden oder es kann mit der Option 
+„Durchsuchbar machen und als Taxonomie hinzufügen” beides erfolgen.
 
 ==== Beschreibung der einzelnen Feldtypen
 
-Sehen wir uns nun die Feldtypen an, die Joomla! in der Version 3.7 für
+Sehen wir uns nun die Feldtypen an, die Joomla! in der Version 6 für
 uns bereithält.
 
 ===== Kalender (Date-Picker)
@@ -150,13 +242,12 @@ Dieses Feld stellt ein JavaScript-Datum-Auswahlfeld zur Verfügung.
 Sobald man in das Feld klickt, öffnet sich ein Kalender-Popup zur
 Auswahl des Datums. Dieser Kalender wurde speziell für Joomla! 3.7 neu
 gestaltet. In den Feldeinstellungen kann man einen Standardwert, wie zum
-Beispiel „NOW“ eintragen und festlegen, ob die Zeit angezeigt werden
+Beispiel „NOW“ (Heute) eintragen und festlegen, ob die Zeit angezeigt werden
 soll oder nicht. Das Datumsformat wird seit Joomla! 3.7 über
 Sprachstrings gesteuert.
 
-image:media/image3.jpg[media/image3,width=393,height=328]
-
-Bild 16.3 – Das neue Joomla!-Kalenderfeld
+.Das Joomla!-Kalenderfeld
+image::17/03_joomla_kalenderfeld.png[Das Joomla! - Kalenderfeld]
 
 ===== Kontrollkästchen
 
@@ -174,9 +265,8 @@ als Hex-Wert in der Datenbank. Wenn Sie wollen, können Sie im
 _Standard-Parameter (Default)_ einen Wert hinterlegen (zum Beispiel
 #ff0000).
 
-image:media/image4.jpg[media/image4,width=548,height=207]
-
-Bild - 16.4 – Der Farbwähler
+.Der Farbwähler
+image::17/04_feld_farbwaehler.png[Der Farbwähler]
 
 ===== Editor (WYSIWYG)
 
@@ -189,6 +279,7 @@ werden sollen und wie groß das Editorfenster eingebunden werden soll.
 Dieses Feld stellt ein numerisches Listen-Auswahlfeld zur Verfügung.
 Dabei kann man den Wert „Erster“, also das Minimum sowie den Wert
 „Letzter“, also das Maximum, sowie die Schritte definieren.
+Mehrfachauswahl kann erlaubt werden.
 
 ===== Liste (Dropdown und Mehrfachauswahl)
 
@@ -203,6 +294,7 @@ Beim Imagefeld können Sie ein übergeordnetes Bild-Verzeichnis
 definieren. Darauf basierend stellt dann das Eingabefeld eine Liste der
 Bildnamen zur Auswahl, aus denen man wählen kann. Sie können auch eine
 Klasse definieren, die dann in der Ausgabe im img-Tag hinzugefügt wird.
+Mehrfachauswahl kann eingestellt werden.
 
 ===== Media (Medienmanager)
 
@@ -217,14 +309,16 @@ Joomla!-_image_-Verzeichnis zugreifen kann.
 
 ===== Optionsfeld (Radio Buttons)
 
-Beim Optionsfeld (Radio Buttons) definieren Sie den Feldschlüssel und
-den dazugehörigen Wert, dazu ist es bei Radio Buttons üblich, dass nur
-eine Auswahl möglich ist. Ihre festgelegten Optionen werden dann in
-einem modernden „Switcher“-Design dargestellt.
+Beim Optionsfeld (Radio Buttons) definieren Sie den Feldschlüssel und 
+den dazugehörigen Wert, dazu ist es bei Radio Buttons üblich, dass 
+nur eine Auswahl möglich ist. Die Darstellung der festgelegten Optionen 
+kann in den Eingabemaske-Optionen unter Formular Layout entweder als 
+Schalter oder als Buttons eingestellt werden. Wobei die Darstellung 
+als Schalter (Switcher) nur bei zwei Optionen sinnvoll ist. Für mehr 
+als zwei Optionen sollte Buttons ausgewählt werden.
 
-image:media/image5.jpg[media/image5,width=548,height=103]
-
-Bild 16.4 – Das Design des Optionsfelds
+.Das Design des Optionsfelds
+image::17/05_design_optionsfeld.png[Das Design des Optionsfelds]
 
 ===== SQL (Dropdown und Mehrfach-Auswahl)
 
@@ -236,6 +330,11 @@ verwenden Sie:
 
 SELECT ++`++title++`++ AS ++`++text++`++, ++`++id++`++ AS
 ++`++value++`++ FROM #++__++content
+
+Die Eingabe einer Kopfzeile ist möglich. Unter Eingabemaske-Optionen kann 
+im Formular Layout zwischen Erweiterter-Auswahl und HTML-Auswahl gewählt 
+werden. Mit der Erweiterten Auswahl wird eine Suchzeile in der Auswahlliste 
+ausgegeben.
 
 [width="99%",cols="14%,86%",options="header",]
 |===
@@ -259,6 +358,7 @@ Wenn Sie mehr als nur eine Zeile Text eingeben wollen, können Sie mit
 dem Feld „Textbereich“ eine mehrzeilige Texteingabe ohne WYSIWYG-Editor
 einbinden. Zu den Feldoptionen gehören die Angabe der Eingabe-Feldgröße
 in Zeilen und Spalten sowie eine maximale Zeichenlänge.
+Auch hier können Sie eine Joomla!-Textfiltermethode hinzufügen.
 
 ===== URL (Texteingabe mit URL-Validierung)
 
@@ -282,9 +382,8 @@ Quelle: https://de.wikipedia.org/wiki/Punycode
 
 ===== Benutzer (Dropdown)
 
-Auswahlfeld, um einen bereits registrierten Nutzer auszuwählen. Als
-Standardwert können Sie die Benutzer-ID des entsprechenden Benutzers
-eintragen.
+Auswahlfeld, um einen bereits registrierten Nutzer auszuwählen. Als 
+Standardwert können Sie einen Benutzer vorauswählen.
 
 ===== Benutzergruppen (Dropdown oder Mehrfach-Auswahl)
 
@@ -293,3 +392,49 @@ Benutzergruppen erstellen. Wenn Sie die Mehrfachauswahl aktivieren,
 können hier mehrere Gruppen eingegeben werden. Als Standardwert kann die
 ID der Benutzergruppe eingegeben werden. Bei einer Mehrfach-Auswahl
 geben Sie diese Werte durch Komma getrennt ein.
+
+===== Hinweis (note)
+
+Mit dem Feld Hinweis können Sie eine Notiz mit Anweisungen für den 
+Beitragsersteller anzeigen lassen. Es kann eine Überschrift und Text 
+eingegeben werden. Für die Ausgabe können CSS-Klassen eingetragen werden, 
+die im Container um das Hinweisfeld eingetragen werden. Die Größe der 
+Überschrift von H1 bis H6 kann ausgewählt werden. Dabei ist zu beachten, 
+dass bei einer Ausgabe im Frontend die semantische Reihenfolge der 
+Überschriften berücksichtigt wird. Eine Schaltfläche “Schließen” kann 
+mit der Angabe true angezeigt und mit der Angabe false entfernt werden.
+Unter den Ausgabe-Optionen kann ausgewählt werden, ob der Hinweis auch 
+im Frontend angezeigt werden soll.
+
+===== Subform
+
+Ein Subform Custom Field ist ein spezieller Typ eines Joomla-Custom-Fields, 
+der es erlaubt, ein oder mehrere Felder innerhalb eines anderen Feldes zu integrieren. 
+Technisch gesehen ist es ein Feld, das eine Struktur von Unterfeldern (Sub-Fields) 
+enthält, die entweder einmalig oder wiederholbar sind. Es ersetzt den alten Typ 
+„Repeatable Field“ aus Joomla 3 und erweitert dessen Funktionalität deutlich.
+
+Das Subform-Feld bildet eine übergeordnete (Parent) Struktur, die mehrere untergeordnete 
+Felder (Child-Fields) enthalten kann. Diese Child-Fields können unterschiedliche Feldtypen 
+sein (z. B. Text, URL, Media, Integer etc.). 
+
+Mit der Option Wiederholbar kann das Subform mehrfach wiederholt werden, sodass der Benutzer 
+mehrere Datensätze innerhalb desselben Felds erfassen kann.
+
+Für ein Subform ist es ratsam das Layout im Reiter _Optionen_ auf Formular zu stellen, da 
+im Standard-Layout die Felder ansonsten nebeneinander angezeigt werden. Bei 1-3 Feldern
+ist das noch überschaubar, wenn es allerdings mehrere untergeordnete Felder gibt, wird die
+Darstellung unübersichtlich.
+
+Wie ein Subform angelegt und verwendet wird, ist im Kapitel 17.03 beschrieben.
+
+.Joomla! Subformfeld
+image::17/06_subformfeld.png[Joomla! Subformfeld]
+
+===== Zahl
+
+In diesem Feld können sowohl ganze Zahlen, als auch Dezimalzahlen eingegeben 
+werden. Dabei kann man den Minimal- und Maximal-Wert, sowie die Schrittweite 
+definieren. Zusätzlich kann die Zahl auch als Währung formatiert werden. Ein 
+eingetragenes Währungssymbol kann vor oder nach der Zahl ausgegeben werden 
+und die Anzahl der Dezimalstellen lässt sich ebenfalls angeben.

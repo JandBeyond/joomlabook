@@ -3,7 +3,7 @@
 Theorie ist gut. Aber die Praxis lehrt, es selbst anzuwenden. Aus diesem
 Grund bietet es sich an, ein gemeinsames kleines Projekt umzusetzen und
 somit „Eigene Felder” live kennenzulernen. Bitte beachten Sie, dass das
-Beispielprojekt mit dem Joomla!-Frontend-Template Protostar umgesetzt
+Beispielprojekt mit dem Joomla!-Frontend-Template Cassiopeia umgesetzt
 wurde. Falls Sie es mit einem eigenen Template umsetzen, müssen Sie
 gegebenenfalls individuelle Anpassungen am Code, insbesondere bei der
 Individualisierung der Ausgabe vornehmen.
@@ -34,13 +34,13 @@ _Lebenslauf_ hinterlassen.
 ===== Feldgruppe anlegen
 
 Zunächst erstellen wir eine Feldgruppe für Benutzer. Dazu klicken wir im
-Backendmenü auf Benutzer » Verwalten, im Seitenmenü auf Feldgruppen und
+Backendmenü auf BENUTZER » VERWALTEN, im Seitenmenü auf Feldgruppen und
 legen die Gruppe _Arbeitgeberinformationen_ an.
 
 Unter _Titel_ geben wir den Titel der Feldgruppe an. Dieser wird als
 Überschrift in der _Registrierung_ und im _Benutzerprofil_ erscheinen.
 
-Nun navigieren wir zu Benutzer » Verwalten » FELDER und legen unser
+Nun navigieren wir zu BENUTZER » VERWALTEN » FELDER und legen unser
 erstes Feld an.
 
 ===== Firmenname (Feldtyp Text)
@@ -63,22 +63,20 @@ müssen Sie das bisherige Feld löschen und ein neues anlegen.
 Klicken Sie nun im Reiter Berechtigungen auf den seitlichen Reiter
 „_Public_“ und gewähren Sie die Bearbeitung von „Eigene Felder”.
 
-image:media/image13.jpg[media/image13,width=548,height=257]
+.Berechtigungen für das Feld einstellen
+image::17/15_berechtigungen_einstellen.png[Berechtigungen für das Feld einstellen]
 
-Bild 16.13 – Berechtigungen für das Feld einstellen
-
-Klicken Sie jetzt auf speichern & schlieSSen.
+Klicken Sie jetzt auf _speichern & schliessen_.
 
 Werfen wir nun einen Blick im Frontend auf die Registrierungsmaske,
 erscheint hier ein neuer Bereich mit dem Titel
 _Arbeitgeberinformationen_ und unserem ersten eigenen Feld
 „_Firmenname_“
 
-image:media/image14.jpg[media/image14,width=548,height=388]
-
-Bild 16.14 – Unser eigenes Feld in der Benutzerregistrierung
-
-Wir wechseln wieder in die Ansicht Benutzer » Verwalten » FELDER und
+.Unser eigenes Feld in der Benutzerregistrierung
+image::17/16_eigenes_feld_benutzerregistrierung.png[Unser eigenes Feld in der Benutzerregistrierung]
+ 
+Wir wechseln wieder in die Ansicht BENUTZER » VERWALTEN » FELDER und
 legen die nächsten Felder analog zum ersten an.
 
 ===== Adresse (Feldtyp Text)
@@ -86,20 +84,23 @@ legen die nächsten Felder analog zum ersten an.
 Neben den Arbeitgeberinformationen möchten wir mittels eines Adressfelds
 auch eine Google-Maps-Ansicht im Frontend anzeigen. Hierfür legen Sie
 wieder ein Feld vom Typ _Text_ mit dem Titel _Adresse_ an. Den Filter
-stellen Sie auf _text_ ein. In der _Feldbeschreibung_ und im
-_Platzhaltertext_ bietet es sich an, anzugeben welches Format vom
-Benutzer erwartet wird. Wechseln Sie in den Reiter Optionen und tragen
-Sie als Platzhalter zum Beispiel „Musterstraße 123, 12345 Musterstadt,
-Deutschland“ ein.
+stellen Sie auf _text_ ein. Die Feldgruppe ist ebenfalls Arbeitgeberinformationen. 
+In der _Feldbeschreibung_ und im_Platzhaltertext_ bietet es sich an, 
+anzugeben welches Format vom Benutzer erwartet wird. Wechseln Sie in den 
+Reiter Optionen und tragen Sie als Platzhalter zum Beispiel „Musterstraße 123, 
+12345 Musterstadt, Deutschland“ ein.
 
 Speichern Sie das Feld und stellen Sie anschließend im Reiter
-Berechtigungen wieder ein, dass dieses Feld von der Gruppe _Public_
+BERECHTIGUNGEN wieder ein, dass dieses Feld von der Gruppe _Public_
 bearbeitet werden kann.
+
+*FOLGENDER HINWEISKASTEN IST VERALTET:*
 
 [width="99%",cols="14%,86%",options="header",]
 |===
 |CHV++_++BOX++_++ID++_++01 |
 |icn001 a|
+
 *Für Fortgeschrittene:* Mit der Google-Maps-API und dessen
 Autovervollständigen-Funktion können Sie aus einem normalen
 Texteingabefeld im Handumdrehen eine Adress-Suche erstellen. Entweder
@@ -166,7 +167,7 @@ an.
 ===== Feldgruppe anlegen
 
 Für die Stellenanzeigen-Felder legen wir eine Feldgruppe für Beiträge
-an. Klicken Sie dazu auf Beiträge » Feldgruppen, stellen Sie sicher,
+an. Klicken Sie dazu auf BEITRÄGE » FELDGRUPPEN, stellen Sie sicher,
 dass links vom Suchfeld der Kontext _Beiträge_ ausgewählt ist und legen
 Sie eine neue Gruppe mit dem Titel _Stelleninformationen_ an.
 
@@ -187,7 +188,7 @@ Für die _Arbeitszeit_, im konkreten Sinne meine ich hier _Vollzeit_,
 _Teilzeit_ und _Aushilfe_, legen Sie ein Feld vom Typ „_Optionsfeld_“
 an.
 
-Über den grünen Plus-Button im Reiter Allgemein im Bereich Feld und
+Über den grünen Plus-Button im Reiter ALLGEMEIN im Bereich Feld und
 Werte können Sie dann die Auswahloptionen wie im Bild 16.15 hinzufügen.
 
 Weisen Sie das Feld der Feldgruppe _Stelleninformationen_ und der
@@ -195,9 +196,8 @@ Kategorie _Stellenangebote_ zu. Speichern Sie das Feld und erlauben Sie
 anschließend im Reiter Berechtigungen das Bearbeiten der Felder für die
 Gruppe _Registered._
 
-image:media/image15.jpg[media/image15,width=548,height=300]
-
-Bild 16.15 – Einstellungen der Werte im Radio-Feld.
+.Einstellungen der Werte im Radio-Feld
+image::17/17_einstellungen_radio_feld.png[Einstellungen der Werte im Radio-Feld]
 
 ===== Einstellungsdatum
 
@@ -212,16 +212,15 @@ Sie das Feld und stellen Sie die Zugriffsrechte ein.
 ===== Programmiersprachen
 
 Da es sich um Stellenanzeigen im Bereich Programmierung handelt,
-erstellen wir hier ein Feld vom Typ _Kontrollkästchen_ mit
+erstellen wir hier ein Feld vom Typ _Kontrollkästchen_ mit dem Titel
 Programmiersprachen. Tragen Sie, genauso wie Sie es beim Radio-Feld
 gemacht haben, eine Liste von Programmiersprachen in den Feldoptionen
 ein. Diese könnten zum Beispiel sein: _JavaScript_, _Java_, _C#_, _C_,
 _C{plus}{plus}_, _Python_, _PHP_, _R_, _Perl_, _Ruby_. Vergessen Sie
 nicht die Zugriffsrechte für registrierte Benutzer einzustellen.
 
-image:media/image16.jpg[media/image16,width=548,height=278]
-
-Bild 16.16 – Abbildung der Optionen für das Checkbox-Feld
+.Abbildung der Optionen für das Checkbox-Feld
+image::17/18_optionen_checkbox_feld.png[Abbildung der Optionen für das Checkbox-Feld]
 
 ==== Bewerbungsformular
 
@@ -231,20 +230,19 @@ die Kontaktaufnahme.
 
 ===== Kategorie für Arbeitgeberkontakte anlegen
 
-Erstellen Sie eine Kontaktkategorie _Arbeitgeber_ unter Komponenten »
-Kontakte » Kontaktkategorien.
+Erstellen Sie eine Kontaktkategorie _Arbeitgeber_ unter KOMPONENTEN » 
+KONTAKTE » KATEGORIEN..
 
 ===== Feldgruppe anlegen
 
 Nun legen wir noch ein Feld für das Kontaktformular an. Zunächst legen
-Sie wieder eine Feldgruppe an. Dazu klicken Sie auf Komponenten »
-Kontakte und anschließend auf Feldgruppen. Links vom Suchfeld müssen Sie
-den Kontext _E-Mail_ auswählen, wie im Bild 16.17 angezeigt. Nennen Sie
+Sie wieder eine Feldgruppe an. Dazu klicken Sie auf KOMPONENTEN » 
+KONTAKTE und anschließend auf Feldgruppen. Links vom Suchfeld müssen Sie
+den Kontext _E-Mail_ auswählen, wie im Bild 17.17 angezeigt. Nennen Sie
 die Gruppe _Weitere Informationen_.
 
-image:media/image17.jpg[media/image17,width=548,height=344]
-
-Bild 16.17 – Auswahl des Kontext Mail
+.Auswahl des Kontext Mail
+image::17/19_auswahl_mail_feldgruppe.png[Auswahl des Kontext Mail]
 
 ===== Link zum Lebenslauf
 
@@ -253,7 +251,7 @@ kann. Das kann eine URL oder ein Link zu einer Datei sein, die er für
 uns bereitgestellt hat. Wechseln Sie nun im Seitenmenü zu Felder. Wählen
 Sie links vom Suchfeld den Kontext _E-Mail_ aus und erstellen Sie ein
 Feld vom Typ _URL_ mit dem Titel _Link zum Lebenslauf_. Unter Schemata
-legen wir fest, dass der eingegebene Wert eine _URL_ sein muss und
+legen wir fest, dass der eingegebene Wert eine URL mit _HTTPS_ sein muss und
 stellen die _relativen URLs_ auf _Nein_. Weisen Sie das Feld der Gruppe
 _Weitere Informationen_ und der Kategorie _Arbeitgeber_ zu.
 
@@ -267,7 +265,7 @@ konfigurieren wir das Frontend.
 
 ===== Arbeitgeberprofil
 
-Legen Sie einen neuen Menüpunkt vom Typ Benutzer » Benutzerprofil an und
+Legen Sie einen neuen Menüpunkt vom Typ BENUTZER » BENUTZERPROFIL an und
 benennen Sie den Menüpunkt _Arbeitgeberprofil_. Hier wird später der
 angemeldete Benutzer sein eigenes Profil anzeigen und bearbeiten können.
 Stellen Sie die Zugriffsebene für diesen Menüpunkt auf _Registriert_,
@@ -277,14 +275,15 @@ damit er nur eingeblendet wird, wenn der Benutzer eingeloggt ist.
 
 Richten Sie einen Menüpunkt ein, der später eine Beitragsliste der
 Kategorie Stellenangebote darstellt. Wählen Sie dazu den Menü-Typ
-Kategorieliste aus und benennen Sie den Menüpunkt „_Stellenangebote_“.
+Kategorieliste unter Beiträge aus und benennen Sie den Menüpunkt 
+„_Stellenangebote_“.
 
 ===== Kontakterstellung aktivieren
 
 Wir möchten im Frontend eine Liste aller angemeldeten Arbeitgeber mit
 ihren Kontaktdaten und einem Kontaktformular anzeigen. Damit der Nutzer
 nicht jeden Kontakteintrag selbst erstellen muss, klicken Sie im Backend
-unter Erweiterungen » Plugins und aktivieren Sie das
+unter SYSTEM » PLUGINS und aktivieren Sie das
 „http://localhost:8888/joomla-cms/administrator/index.php?option=com_plugins&task=plugin.edit&extension_id=431[_Benutzer
 - Kontakterstellung_]“-Plug-in. Stellen Sie es so ein, dass der Kontakt
 automatisch veröffentlicht und in die Kategorie _Arbeitgeber_ verschoben
@@ -293,20 +292,19 @@ werden soll.
 ===== Menüpunkt für Kontaktliste anlegen
 
 Die Arbeitgeber werden in einer Kontaktliste im Frontend angezeigt.
-Erstellen Sie dafür einen neuen Menüpunkt vom Typ Kontakte » Kontakte in
-Kategorie auflisten und wählen Sie die Kategorie _Arbeitgeber_ aus.
+Erstellen Sie dafür einen neuen Menüpunkt vom Typ KONTAKTE » KONTAKTE IN 
+KATEGORIE AUFLISTEN und wählen Sie die Kategorie _Arbeitgeber_ aus.
 Benennen Sie den Menüpunkt „_Arbeitgeberliste_“.
 
 ===== Zugriffsrechte für das Erstellen von Beiträgen einstellen
 
 Damit der registrierte Nutzer eine Stellenanzeige überhaupt einreichen
 kann, müssen Sie in der globalen Konfiguration nun auch für die Gruppe
-Registriert die Rechte _Erstellen_ und _Eigene Felder bearbeiten_ auf
+Registriert die Rechte _Erstellen_ und _Inhalt von eigenen Feldern bearbeiten_ auf
 _erlaubt_ stellen.
 
-image:media/image18.jpg[media/image18,width=548,height=319]
-
-Bild 16.18 – Rechte für das Erstellen von Beiträgen einstellen
+.Rechte für das Erstellen von Beiträgen einstellen
+image::17/20_rechte_beitraege_erstellen.png[Rechte für das Erstellen von Beiträgen einstellen]
 
 ===== Optional: Alternatives Layout und Menütyp für das Einreichen von Stellenanzeigen
 
@@ -321,8 +319,8 @@ anlegen. Dazu erstellen wir ein Alternatives Layout und einen eigenen
 Menütyp zum Einreichen der Beiträge.
 
 Um das geplante Formularlayout in der Beitragseingabemaske anzubieten,
-kopieren Sie die Datei _com++_++content/views/form/tmpl/edit.php_ sowie
-_com++_++content/views/form/tmpl/edit.xml_ in Ihr Template-Verzeichnis
+kopieren Sie die Datei _components/com++_++content/tmpl/form/edit.php_ sowie
+_components/com++_++content/tmpl/form/edit.xml_ in Ihr Template-Verzeichnis
 unter _templates/ihrtemplate/html/com++_++content/form_. Benennen Sie
 die Datei _edit.php_ in _stellenanzeigen.php_ um. Benennen Sie die Datei
 _edit.xml_ in _stellenanzeigen.xml_ um.
@@ -331,18 +329,17 @@ _edit.xml_ in _stellenanzeigen.xml_ um.
 |===
 |CHV++_++BOX++_++ID++_++02 |
 |icn002 |*Hinweis:* Alle Informationen zu Overrides und Alternativen
-Layouts finden Sie im Kapitel 12.1.
+Layouts finden Sie im Kapitel 12.01.
 |===
 
 Öffnen Sie nun die Datei _stellenanzeigen.php_ und entfernen Sie
-zunächst alle Felder von ++<++?php echo
-JHtml::++_++('bootstrap.startTabSet', $this-++>++tab++_++name,
-array('active' =++>++ 'editor')); ?++>++ bis ++<++?php echo
-JHtml::++_++('bootstrap.endTabSet'); ?++>++. In der Joomla!-Version
-3.7.0 wären das die Zeilen 53 bis 145. Ersetzen Sie diese durch den
-Inhalt von Listing 16.4.
+zunächst alle Felder von ++<++?php echo HTMLHelper::_(uitab.startTabSet', 
+$this->tab_name, ['active' => 'editor', 'recall' => true, 'breakpoint' => 
+768]);?++>++ bis ++<++?php echo HTMLHelper::_(uitab.endTabSet'); ?++>++. 
+In der Joomla!-Version 6 wären das die Zeilen 50 bis 150. Ersetzen Sie diese durch den
+Inhalt von Listing 17.4.
 
-Listing 16.4 – Ausgabe des Titels, des Alias und aller eigenen Felder im
+Listing 17.4 – Ausgabe des Titels, des Alias und aller eigenen Felder im
 Formular
 
 ++<++?php echo $this-++>++form-++>++renderField('title'); ?++>++ +
@@ -366,24 +363,24 @@ Tauschen Sie in der Zeile 3 den Sprachstring im title-Attribut
 _COM++_++CONTENT++_++FORM++_++VIEW++_++DEFAULT++_++TITLE_ durch
 _COM++_++CONTENT++_++FORM++_++VIEW++_++_*STELLEN*_++_++TITLE_ aus.
 
-Erstellen Sie ein neues Sprach-Override im _Kontext Admin_ unter
-Erweiterungen » Sprachen » Overrides und übersetzen Sie diesen
-Sprachschlüssel mit _Stellenanzeige einreichen_. Oder fügen Sie diesen
-String in Ihrer Sprachdatei unter _administrator/languages/_ hinzu.
+Erstellen Sie ein neues Sprach-Override im _Kontext Administrator_ unter
+SYSTEM » SPRACHEN-OVERRIDES und übersetzen Sie diesen Sprachschlüssel mit 
+_Stellenanzeige einreichen_. Oder fügen Sie diesen String in Ihrer Sprachdatei 
+unter _administrator/language/overrides_ hinzu.
 
 ===== Menüpunkt zum Einreichen anlegen
 
 Damit der registrierte Nutzer nun eine Stellenanzeige einreichen kann,
-erstellen Sie einen Menüpunkt vom Typ Beiträge » Stellenanzeige
-Einreichen. Das ist der Menütyp den wir soeben angelegt haben. Stellen
+erstellen Sie einen Menüpunkt vom Typ BEITRÄGE » STELLENANZEIGE 
+EINREICHEN Das ist der Menütyp den wir soeben angelegt haben. Stellen
 Sie in den Menüpunkteinstellungen im Reiter „Optionen“ ein, dass der
 Beitrag automatisch in die _Standardkategorie_ _Stellenangebote_
 abgelegt werden soll. Stellen Sie die Zugriffsebene dieses Menüpunkts
 auf _Registered_.
 
 Falls Sie keinen eigenen Menütyp zum Einreichen der Beiträge erstellt
-haben, wählen Sie in diesem Fall den Menütyp Beiträge » Beitrag
-erstellen und stellen Sie in den Menüpunkteinstellungen im Reiter
+haben, wählen Sie in diesem Fall den Menütyp BEITRÄGE » BEITRAG ERSTELLEN 
+und stellen Sie in den Menüpunkteinstellungen im Reiter
 „Optionen“ ein, dass der Beitrag automatisch in die Kategorie
 _Stellenangebote_ abgelegt werden soll. Stellen Sie die Zugriffsebene
 auf _Registered_.
@@ -409,21 +406,21 @@ bearbeiten. Wenn Sie auf _Stellenanzeige einreichen_ klicken, sehen Sie
 ein Eingabeformular zum Einreichen der Anzeigen. Füllen Sie das Formular
 aus und speichern Sie den Beitrag.
 
-image:media/image19.jpg[media/image19,width=548,height=403]
+*HIER KOMMT FEHLERMELDUNG: FELD BENÖTIGT: KATEGORIE*
 
-Bild 16.19 – Eingabeformular im Frontend
+.Eingabeformular im Frontend
+image::17/21_eingabeformular_frontend.png[Eingabeformular im Frontend]
 
 Klicken Sie nun auf den Link _Stellenangebote_. Die von Ihnen
 eingereichte neue Stellenanzeige sollte nun in der Übersicht aufgeführt
 werden. Falls nicht, müssen Sie diese im Backend als Administrator noch
 freigeben. Klicken Sie auf den Titel der Stellenanzeige.
 
-Im Bild 16.20 sehen Sie jetzt wie die eigenen Felder mithilfe der
+Im Bild 17.20 sehen Sie jetzt wie die eigenen Felder mithilfe der
 _Automatischen Anzeige_ im Beitrag ausgegeben werden.
 
-image:media/image20.jpg[media/image20,width=548,height=307]
-
-Bild 16.20 – Automatische Anzeige der Felder im Frontend.
+.Automatische Anzeige der Felder im Frontend
+image::17/22_automatische_anzeige_feld_frontend.png[Automatische Anzeige der Felder im Frontend]
 
 Diese Anzeige mag in manchen Fällen zufriedenstellend sein, doch für das
 Stellenportal zeigt sich diese Ausgabe nicht wirklich einladend.
@@ -433,7 +430,7 @@ ansprechender im Frontend auszugeben?
 
 ===== Individualisierung der Ausgabe
 
-Wie im Kapitel 16.1.5 erwähnt, können Sie Felder aus dem Beitrag
+Wie im Kapitel 17.05 erwähnt, können Sie Felder aus dem Beitrag
 entweder _automatisch_, über den Editor mittels _Plugin-Code_ oder in
 einem _Override/Alternativen Layout_ individuell ausgeben.
 
@@ -441,17 +438,19 @@ Für ein ansprechendes Erscheinungsbild, das einen Mix aus
 Arbeitgeberinformationen und eigenen Feldern anzeigt, legen wir ein
 Alternatives Layout für die Beitragsausgabe an.
 
-Sehen Sie sich unbedingt Kapitel 12.1 nochmal an, falls Sie im Umgang
+Sehen Sie sich unbedingt Kapitel 12.01 nochmal an, falls Sie im Umgang
 mit Overrides und Alternativen Layouts noch nicht geübt sind.
 
 Erstellen Sie in Ihrem Template-Ordner unter
-_templates/protostar/html/com++_++content++_++article/_ eine Datei
+_templates/cassiopeia/html/com++_++content++_++article/_ eine Datei
 namens _stellenanzeigen.php_.
 
 Öffnen Sie die Datei zur Bearbeitung und leiten Sie die Datei mit
 folgendem Code ein:
 
-Listing 16.5 – Einleitung des Alternativen Layouts
+Listing 17.5 – Einleitung des Alternativen Layouts
+
+*CODE MUSS ANGEPASST WERDEN:*
 
 ++<++?php defined('++_++JEXEC') or die; +
 +
@@ -460,11 +459,13 @@ JHtml::addIncludePath(JPATH++_++COMPONENT . '/helpers'); +
 // Kürzel zum Abrufen der Artikelparameter +
 $params = $this-++>++item-++>++params;
 
-Zunächst wollen wir, wie im Kapitel 16.1.5.3 beschrieben, die
+Zunächst wollen wir, wie im Kapitel 17.05 beschrieben, die
 Beitrags-Felder dem jeweiligen Feldnamen zuweisen. Dazu fügen Sie im
-oberen Teil der Datei den Code aus Listing 16.6 hinzu:
+oberen Teil der Datei den Code aus Listing 17.6 hinzu:
 
-Listing 16.6 – Code zum Einbinden der eigenen Felder per Feldnamen
+*CODE MUSS ANGEPASST WERDEN:*
+
+Listing 17.6 – Code zum Einbinden der eigenen Felder per Feldnamen
 
 // Beitrags-Felder Mapping +
 $customFields = $this-++>++item-++>++jcfields; +
@@ -473,10 +474,12 @@ $customFields++[++$customField-++>++name++]++ = $customField; +
 }
 
 Das gleiche wollen wir mit den Angaben aus dem Benutzerprofil machen.
-Fügen Sie also den Code aus Listing 16.7 ebenso in den oberen Bereich
+Fügen Sie also den Code aus Listing 17.7 ebenso in den oberen Bereich
 der Datei.
 
-Listing 16.7 – Einbinden der eigenen Felder des Benutzers im Beitrag
+Listing 17.7 – Einbinden der eigenen Felder des Benutzers im Beitrag
+
+*CODE MUSS ANGEPASST WERDEN:*
 
 //Userobjekt aufrufen +
 $user = JFactory::getUser($this-++>++item-++>++created++_++by); +
@@ -498,7 +501,9 @@ beeinflussen. Um auf verschiedene Schattierungen der Firmenfarbe
 zugreifen zu können, wandeln wir zunächst den hexadezimalen Wert, den
 der User eingetragen hat, in RGB-Werte um.
 
-Listing 16.8 – Umwandeln der Firmenfarbe in RGB
+Listing 17.8 – Umwandeln der Firmenfarbe in RGB
+
+*CODE MUSS ANGEPASST WERDEN:*
 
 //Farbe in rgb Liste umwandeln +
 $farbe = $userFields++[++'firmenfarbe'++]++-++>++value; +
@@ -508,7 +513,9 @@ $rgbcolor = $r.','.$g.','.$b;
 Anschließend bedienen wir uns der Farbe und erstellen ein paar
 CSS-Definitionen für die Ausgabe.
 
-Listing 16.9 – Erstellen von CSS Definitionen
+Listing 17.9 – Erstellen von CSS Definitionen
+
+*CODE MUSS ANGEPASST WERDEN:*
 
 // CSS Definieren +
 $css = "body.site ++{++ background:".$farbe ."; }++\++n"; +
@@ -520,9 +527,11 @@ font-weight:bold; background-color:rgba(". $rgbcolor .",0.3); border:1px
 solid " . $farbe . "; color:" . $farbe . "; padding:10px; }++\++n";
 
 Dieses css muss dann als lokale Stildefinition im Beitrag aufgerufen
-werden, wie im Listing 16.9 zu sehen ist.
+werden, wie im Listing 17.9 zu sehen ist.
 
-Listing 16.9 – Einbinden der CSS-Definitionen
+Listing 17.9 – Einbinden der CSS-Definitionen
+
+*CODE MUSS ANGEPASST WERDEN:*
 
 // Dokumenten Objekt aufrufen +
 $doc = JFactory::getDocument(); +
@@ -530,11 +539,13 @@ $doc = JFactory::getDocument(); +
 // Lokale CSS Definitionen hinzufügen +
 $doc-++>++addStyleDeclaration($css, $type= 'text/css');
 
-Nun können Sie mit dem Code in Listing 16.10 die Felder individuell
+Nun können Sie mit dem Code in Listing 17.10 die Felder individuell
 ausgeben. Wie Sie sehen, wurden im Beispiel sogar _Rich Snippets_ nach
 Scheme.org mit in die Ausgabe eingebunden.
 
-Listing 16.10 – Ausgabe der Eigenen Felder in einem eigenen Layout
+Listing 17.10 – Ausgabe der Eigenen Felder in einem eigenen Layout
+
+*CODE MUSS ANGEPASST WERDEN:*
 
 ++<++div class="item-page++<++?php echo $this-++>++pageclass++_++sfx;
 ?++>++" itemscope itemtype="http://schema.org/JobPosting"++>++ +
@@ -610,7 +621,7 @@ echo $this-++>++item-++>++pagination;?++>++ +
 +
 ++<++/div++>++
 
-Da wir als registrierter Nutzer über das Frontend in Joomla! 3.7 nicht
+Da wir als registrierter Nutzer über das Frontend in Joomla! 6 nicht
 kontrollieren können, in welchem Layout eine Stellenanzeige erscheinen
 soll, stellen wir in der _Globalen Konfiguration_ von Joomla! ein, dass
 Beiträge grundsätzlich mit diesem Alternativen Layout „Stellenanzeigen“
@@ -622,9 +633,8 @@ wählen Sie im Reiter Beiträge unser Layout „_Stellenanzeigen_“ aus.
 Wenn Sie nun die Stellenanzeigen aufrufen, werden diese im alternativen
 Layout dargestellt.
 
-image:media/image21.jpg[media/image21,width=548,height=351]
-
-Bild 16.21 – Individuelle Ausgabe der Anzeige.
+.Individuelle Ausgabe der Anzeige
+image::17/23_individuelle_ausgabe.png[Individuelle Ausgabe der Anzeige]
 
 In der Einleitung dieses Kapitels habe ich Sie darauf hingewiesen, dass
 „Eigene Felder” kein CCK sind. Sie sind ein fantastisches Mittel, um
@@ -637,13 +647,17 @@ möglichst wenig Dritterweiterungen immer am sichersten fährt, wenn sich
 irgendwann die Frage stellt, ob man das CMS ohne hohe Aufwände
 aktualisieren kann.
 
-Doch mit „Eigene Felder” stößt man zumindest aktuell noch an viele
-Grenzen.
+Weitere Funktionen lassen sich mittlerweile auch mit Joomla-Core lösen.
 
-Schön wäre es, wenn es nun zum Beispiel eine Jobsuche geben würde, bei
-der man speziell nach Jobs zum Thema _PHP_ suchen kann. Außerdem wäre es
-noch besser, innerhalb jeder Stellenanzeige direkt ein
-Bewerbungsformular zu haben, bei dem man Lebenslauf und Bild gleich als
-Datei an den Arbeitgeber senden kann. Es wäre auch toll, die beim
-Seitenbetreiber ankommende E-Mail zu individualisieren und dem Bewerber
-eine Mail zu senden, dass die Bewerbung eingegangen ist.
+Allerdings würde dies den Umfang des Anwendungsbeispiels sprengen.
+
+Da Custom Fields seit Joomla 5 durchsuchbar sind, kann z.B. noch eine Suche
+eingebaut werden, um z.B. speziell nach Jobs zum Thema _PHP_ zu suchen.
+
+Für folgende Funktionen sind nach wie vor Dritterweiterung notwendig:
+
+Es wäre schön, innerhalb jeder Stellenanzeige direkt ein Bewerbungsformular 
+zu haben, bei dem man Lebenslauf und Bild gleich als Datei an den Arbeitgeber 
+senden kann. Es wäre auch toll, die beim Seitenbetreiber ankommende E-Mail 
+zu individualisieren und dem Bewerber eine Mail zu senden, dass die Bewerbung 
+eingegangen ist.

@@ -5,11 +5,10 @@
 Die Feldinhalte können alle über die Joomla!-Suche gefunden werden. Wer
 sich aber nach einer Suche im Joomla!-Core sehnt, die spezielle Filter
 auf Basis der eigenen Felder zur Verfügung stellt, wie man es aus
-„Content Construction Kits“ kennt, der hat damit leider kein Glück.
-Dafür sind „Eigene Felder” nicht ausgelegt. Dennoch werden
-Drittanbieter-Erweiterungen diese Lücke füllen. Die Komponente „JA
-Megafilter Component“ von joomlart.com bietet bereits eine
-vielversprechende Lösung.
+„Content Construction Kits“ kennt, der hat noch kein Glück, aber es ist geplant
+und wird als neues Feature kommen. Bis dahin werden Drittanbieter-Erweiterungen 
+diese Lücke füllen. Die Komponente „JA Megafilter Component“ von joomlart.com und 
+„JFilters“ von blue-coder.com bieten bereits eine vielversprechende Lösung.
 
 ==== Erweiterbarkeit
 
@@ -21,16 +20,13 @@ erscheinen werden.
 
 ==== Versionierung
 
-Auch wenn „Eigene Felder” in Erweiterungen mit aktiver Versionierung
-eingebunden sind, ist die Versionierung der Feldinhalte selbst *NICHT*
-möglich.
+Mit Joomla! 6 ist eine Versionierung der Custom Fields möglich.
 
 ==== „Eigene Felder” deaktivieren
 
 Benötigen Sie die Funktion „Eigene Felder” nicht, kann diese über die
 Konfiguration der jeweiligen Komponente deaktiviert werden.
 
-image:media/image12.jpg[media/image12,width=548,height=281]
+.Deaktivieren „Eigene Felder” in den globalen Optionen der Komponente
+image::17/14_deaktivieren_eigene_felder.png[Deaktivieren „Eigene Felder” in den globalen Optionen der Komponente]
 
-Bild 16.12 – Deaktivieren „Eigene Felder” in den globalen Optionen der
-Komponente

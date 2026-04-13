@@ -2,10 +2,10 @@
 
 Jedes Eingabefeld hat sein eigenes Layout im Verzeichnis
 _/layouts/joomla/form/field/_. Sie können die _Ausgabe_ der
-Eingabefelder anpassen, indem Sie ein jLayout-Override (Kapitel 12.1.7)
+Eingabefelder anpassen, indem Sie ein jLayout-Override (Kapitel 12.01)
 in Ihrem Template-Ordner erstellen.
 
 Es kann durchaus auch sein, dass das Plug-in, welches das Feld steuert,
 ebenso Einfluss auf die Ausgabe hat. Hier bietet es sich an, das Plug-in
 zu kopieren und für die eigenen Bedürfnisse anzupassen, oder ein
-Plug-in-Override (12.1.9) im eigenen Template-Ordner zu erstellen.
+Plug-in-Override (12.01) im eigenen Template-Ordner zu erstellen.

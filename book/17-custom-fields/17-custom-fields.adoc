@@ -1,10 +1,9 @@
 == Custom Fields
 
-Seit Joomla! 1.6 war es Entwicklern dank _JForm_ (siehe auch Kapitel
-17.3.11) bereits möglich, Joomla!-Eingabeformulare mittels Plug-ins um
-Felder zu erweitern.
+Seit Joomla! 1.6 war es Entwicklern dank _JForm_ bereits möglich, 
+Joomla!-Eingabeformulare mittels Plug-ins um Felder zu erweitern.
 
-Die nun in Joomla! 3.7 eingeführte Eigene-Felder-Funktionalität (Custom
+Die in Joomla! 3.7 eingeführte Eigene-Felder-Funktionalität (Custom
 Fields[.indexref]####) ermöglicht es Ihnen, benutzerdefinierte Felder
 ohne Programmieraufwand auf intuitive Art und Weise zu Formularen
 hinzuzufügen.
