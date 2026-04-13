@@ -37,3 +37,38 @@ von Grund auf neu geschriebene Joomla!-Version 1.5 zu schreiben, die im
 Januar 2008 erschien und dem Projekt nochmals einen enormen Aufwind gab.
 In den aktuellen Versionen findet sich dadurch kein Code des Vorgängers
 Mambo mehr.
+
+Wesentliche Neuerung der Version 1.6, die im Januar 2011 erschien, war 
+ein Benutzerverwaltungssystem. Bereits ein Jahr später erschien die 
+Version 2.5, die einen schnelleren Seiten­aufbau, eine verbesserte 
+Suchfunktion und vereinfachte Updates mitbrachte.
+
+Einen großen Schritt nach vorne brachte im September 2012 die Version 
+3.0. Neben einer vereinfachten Installation, verbesserter 
+Mehrsprachigkeit und einer neuen Administrationsoberfläche ist die 
+Unterstützung des CSS-Frameworks Bootstapfootnote:[https://de.wikipedia.org/wiki/Bootstrap_(Framework)] zu erwähnen, 
+weil hiermit die Grundlage für Responsives Webdesign von 
+Joomla!-Webseiten gelegt wurde. Damit wurde die Möglichkeit erschaffen, 
+Webseiten zu erstellen, die auch auf den kleinen Bildschirmen von 
+Smartphones ansprechend dargestellt werden. Denn während in den 
+Anfangsjahren von Joomla noch ausschließlich für Desktop PCs und 
+Notebooks entwickelt wurde, verschob sich die Internet-Nutzung 
+zunehmend in Richtung Mobilgeräte wie Smartphones und Tablets.
+Die Versionen 3.x brachten nach und nach viele Verbesserungen, z.B. 
+Das Einfügen von Bildern per Drag-and-Drop (V3.5), benutzerdefinierte 
+Felder (V3.7) und Datenschutzfunktionen (V3.9). Im August 2021 
+erschien die Version 3.10 als Brücke zur gleichzeitig vorgestellten 
+neuen Hauptversion 4.
+
+Mit Version 4.0 änderte sich vieles: Es gab ein nahezu vollständiges 
+internes Redesign, eine erneut überarbeitete Administrationsoberfläche, 
+höhere Mindestanforderungen an die Systemumgebung sowie eine neue Struktur
+für Erweiterungen. Das führte nicht nur zu erheblichem Migrationsaufwand 
+beim Update vieler Webseiten, sondern auch zu einigem Unmut bei 
+Webseitenbetreibern und Herstellern von Joomla!-Erweiterungen.
+Nachdem Joomla! 3 sehr lange (für manche viel zu lange) aktuell war, 
+wurde jetzt eine neue Release-Strategie eingeführt; doch dazu später 
+mehr.
+
+Entsprechend dieser neuen Strategie wurden die Hauptversionen 5.0 im 
+Oktober 2023 und 6.0 im Oktober 2025 wie vorgesehen veröffentlicht.

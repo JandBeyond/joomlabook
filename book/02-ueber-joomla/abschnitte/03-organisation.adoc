@@ -1,102 +1,54 @@
 === Organisation
 
-Das Joomla!-Projekt ist in den letzten Jahren massiv gewachsen und
-musste dabei seine Strukturen mehrfach an die veränderten Anforderungen
-anpassen. Die aktuelle Organisationsstruktur befindet sich zum Zeitpunkt
-der Erscheinung dieses Buchs in einem Übergangsprozess, ist also noch
-nicht vollständig umgesetzt worden.
-
-Die Grundstruktur des Projekts entspricht auf den ersten Blick der eines
-klassischen Unternehmens (siehe Abb 2.1).
+Das Joomla!-Projekt musste seine Strukturen seit 2005 mehrfach an 
+veränderte Rahmenbedingungen anpassen. Die Grundstruktur des Projekts 
+hat sich allerdings in den letzten Jahren kaum verändert und entspricht 
+auf den ersten Blick der eines klassischen Unternehmens (siehe Abb 2.1).
 
 image::media/02/03-01.png[Projektstruktur,width=548,height=389]
 
-Bild 2.1 Neue Organisationstruktur des Joomla!-Projekts
+Bild 2.1 Organisationstruktur des Joomla!-Projekts
 
 Basis des Projekts ist die juristische Person hinter Joomla!, nämlich
-die bereits erwähnte not-for-profit Organisation "OpenSourceMatters
-Inc." mit Sitz in New York.
+die gemeinnützige Organisation "OpenSourceMatters Inc." mit Sitz in New York.
 
 OpenSourceMatters hat einen Vorstand, bestehend aus den Sonderrollen
-"President/in", "Vize-President/in", "Generalsekträr/in" und
-"Schatzmeister/in" sowie den Abteilungsleiter/innen der 7 Abteilungen,
+"Präsident/in", "Vize-Präsident/in", "Generalsekretär/in" und
+"Schatzmeister/in" sowie den Abteilungsleiter/innen der 3 Abteilungen,
 im Projektjargon als "Department Coordinator" bezeichnet.
 
-Derzeit sind die folgenden Abteilungen im Projekt vorgesehen:
+Derzeit sind die folgenden Abteilungen im Projekt realisiert:
 
-* Production: zuständig für die technische Entwicklung des eigenen
+* Production: zuständig für die technische Entwicklung des 
 Kernprodukts "Joomla! CMS"
-* Legal: verteidigt die rechtlichen Interessen des Gesamtprojekts,
-insbesondere im Bezug auf die Marke "Joomla!"
-* Marketing & Communication: koordiniert die interne und externe
-Kommunikation des Projekts und versucht die Verbreitung von Joomla! zu
-erhöhen
-* Events: zuständig für alle Fragen rund um Veranstaltungen und Meetups
-* Operations: kümmert sich um den Betrieb der Infrastruktur, den das
+* Outreach: koordiniert die interne und externe Kommunikation des 
+Projekts und versucht, die Verbreitung von Joomla! zu erhöhen
+* Operations: kümmert sich um den Betrieb der Infrastruktur, die das
 Projekt benötigt, wie zum Beispiel die joomla.org Websites
-* Programs: dieses Department betreut die verschiedenen Programme und
-Initiativen, an denen Joomla beteiligt ist. Hierzu gehört zum Beispiel
-das "Google Summer of Code" Programm oder das geplante
-Zertifizierungs-Programm für Joomla-Administratoren und Dienstleister
-* Local Communities: repräsentiert die lokalen Communities wie
-Usergroups oder nationale Vereine
 
-Jedes Deparment kann wiederrum aus beliebig vielen Teams bestehen, die
-für jeweils einen bestimmten Aspekt zuständig sind. Im Deparment
-"Production" könnte es hier z.B. ein Team für die Übersetzung von Joomla
-in andere Sprachen geben, ein Team für die Entwicklung von Joomla 4.x
-sowie ein Team für die Dokumentation. Die Anzahl der Teams unterliegt
-dabei keiner Begrenzung sondern kann frei gewählt werden.
+Jede Abteilung kann aus beliebig vielen Teams bestehen, die für jeweils 
+einen bestimmten Aspekt zuständig sind. In der Abteilung "Production" 
+gibt es beispielsweise Teams für Barrierefreiheit, für automatisierte Testverfahren,
+für die Beseitigung von Fehlern, für die Wartung von Joomla!, für die
+Veröffentlichung von Releases, für die Dokumentation, für die Sicherheit
+und einige mehr. Die Anzahl der Teams unterliegt dabei keiner Begrenzung, 
+sondern kann innerhalb der Abteilung frei gewählt werden.
 
-Auf der Ebene der Teams angekommen besteht jedes Team aus den Positionen
+Auf der Ebene der Teams angekommen, besteht jedes Team aus den Positionen
 "Teamleiter/in" und "stellv. Teamleiter/in" sowie einer beliebigen
-Anzahl Teammitgliedern. Die Aufnahme in ein Team erfolgt über ein
-Bewerbungsverfahren, dass die Teams individuell gestalten können. Ein
-Team wiederrum wählt dann den Teamleiter sowie seinen Stellvertreter,
+Anzahl von Teammitgliedern. Die Aufnahme in ein Team erfolgt über ein
+Bewerbungsverfahren, das die Teams individuell gestalten können. Ein
+Team wiederum wählt dann den Teamleiter sowie seinen Stellvertreter,
 die Teamleiter eines Departments wählen den Department Coordinator und
-alle Deparment Coordinator wählen die passenden Personen für die vier
+alle Deparment Coordinators wählen die passenden Personen für die vier
 genannten Sonderposten auf Vorstandsebene.
 
 Die Projektstruktur verfügt somit über einige bemerkenswerte Merkmale:
 
-* absolut alle Mitarbeiter im Projekt, ganz egal auf welcher Ebene,
-arbeiten unbezahlt und ehrenamtlich
-* es gibt nicht "die Firma" hinter dem Projekt, die die Entwicklung
+* Absolut alle Mitarbeiter im Projekt, ganz egal auf welcher Ebene,
+arbeiten unbezahlt und ehrenamtlich.
+* Es gibt nicht "die Firma" hinter dem Projekt, die die Entwicklung
 steuert, sondern die Richtungsfindung und Entwicklung erfolgt im Rahmen
-von demokratischen Prozessen
-* es gibt klare Prozesse für Abstimmungen, Team-Gründungen und
--Auflösungen sowie die Aufnahme neuer Mitarbeiter
-
-An dieser Stelle sollte jedoch nicht verschwiegen werden, dass die neue
-Struktur in der Community nicht unumstritten ist. Die Abstimmung über
-den Wechsel zum neuen Aufbau ging denkbar knapp aus und der derzeit
-stattfindende Wechsel von der alten auf die neue Struktur ist massiv
-hinter dem aufgestellten Zeitplan. Kritiker äußern dabei vor allem die
-folgenden Kritikpunkte:
-
-* - die neue Struktur ist zu bürokratisch. Langatmige Prozesse
-verlangsamen die Entscheidungsfindung und nehmen allen Beteiligten die
-nötige Flexibilität
-* in der neuen Struktur ist zu viel "Macht" auf einige wenige Menschen,
-nämlich den Vorstand von OpenSourceMatters konzentriert. Ein System der
-gegenseitigen Prüfung von mehreren, gleichberechtigten Instanzen, wie es
-in der alten Struktur der Fall war, fehlt
-* der Wechsel zur neuen Struktur würde das Projekt über Monate
-beschäftigen und lähmen
-
-Zum jetzigen Zeitpunkt (Februar 2017) ist noch nicht absehbar wie die
-neue Struktur sich auf das Projekt auswirkt - man darf daher gespannt
-sein.
-
-[width="99%",cols="14%,86%",options="header",]
-|===
-|CHV++_++BOX++_++ID++_++02 |
-|icn002 |Als Mitglied des Joomla! Community Leadership Teams war ich,
-der Autor dieses Kapitels, direkt an der Abstimmung über die Adaption
-der neuen Struktur beteiligt und habe dabei gegen deren Einführung
-gestimmt. Ich habe mich bemüht, die Struktur dennoch so neutral wie
-möglich darzustellen und hoffe, dass mir das gelungen ist.
-Nichtsdestotrotz sind Sie herzlich eingeladen, die offizielle
-Beschreibungfootnote:[https://docs.google.com/document/d/1gsUK0kePsBg6xiaUVdN6oExZ0hKEjBxH6bRVAeZy-IE/edit?usp=sharing]
-des Strukturentwurfs zu lesen und sich ein eigenes Bild zu machen.
-|===
+von demokratischen Prozessen.
+* Es gibt klare Prozesse für Abstimmungen, Team-Gründungen und
+-Auflösungen sowie die Aufnahme neuer Mitarbeiter.
