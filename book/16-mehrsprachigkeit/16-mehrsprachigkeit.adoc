@@ -15,4 +15,4 @@ entsprechenden Übersetzung und fungiert nicht als automatisches
 Übersetzungstool – Sie werden um die entsprechende Übersetzungsarbeit
 also nicht herumkommen.
 
-include::abschnitte/01-integrierte-mehrsprachigkeit.adoc
+include::abschnitte/01-integrierte-mehrsprachigkeit.adoc[]
