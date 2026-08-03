@@ -1,6 +1,6 @@
 == Grundlegende Begriffe und Architektur
 
-Bevor wir nun mit dem Aufbau unserer Seite beginnen, möchte ich Ihnen
+Bevor wir nun mit dem Aufbau unserer Seite beginnen, möchte ich dir
 zunächst einen kleinen Einblick in den Grundaufbau von Joomla! geben.
 
 include::abschnitte/01-grundlegendes.adoc[]

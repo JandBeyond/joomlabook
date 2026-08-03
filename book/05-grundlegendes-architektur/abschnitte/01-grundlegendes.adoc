@@ -1,7 +1,7 @@
 === Grundlegende Begriffe
 
-Wenn Sie als Neuling oder Quereinsteiger die Arbeit mit Joomla! in
-Angriff nehmen, werden Sie sich vermutlich mit einigen Begrifflichkeiten
+Wenn du als Neuling oder Quereinsteiger die Arbeit mit Joomla! in
+Angriff nimmst, wirst du dich vermutlich mit einigen Begrifflichkeiten
 schwertun, da diese im Joomla!-_Administrationsbereich_ nicht
 ausführlich erklärt sind. Daher möchte ich, bevor wir mit der
 Einrichtung der Seite starten, erst einmal einige wichtige Begriffe
@@ -111,8 +111,3 @@ In diesem Punkt unterscheidet sich Joomla! von vielen anderen
 Content-Management-Systemen wie Typo3 und Contao, da diese mit einem
 Seitenbaum arbeiten, der gleichzeitig strukturgebend für Navigation und
 die Inhalte ist.
-
-Diese Trennung der beiden Strukturen ist insbesondere für unerfahrene
-Nutzer schwierig zu verstehen und wirkt umständlich, weshalb die
-Trennung in der kommenden Joomla!-Version 4.0 zumindest teilweise
-aufgehoben werden soll.
